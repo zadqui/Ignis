@@ -47,6 +47,13 @@ Se reconoce el trabajo de los autores y colaboradores de esos repositorios. Esta
 
 Los documentos y datos científicos conservan sus fuentes y condiciones de uso; la atribución de los repositorios no sustituye las licencias de terceros. Los modelos y texturas de NASA usados en las vistas 3D se identifican en la interfaz. Three.js se distribuye con [su licencia MIT](frontend/ignis/vendor/three/LICENSE). IGNIS es un proyecto independiente y no implica respaldo de NASA.
 
+### Modelos 3D
+
+- **ISS:** [International Space Station (ISS) (B), NASA 3D Resources](https://science.nasa.gov/3d-resources/international-space-station-iss-b/). Fuente: NASA / Michael D. Carbajal. Archivo local: `frontend/ignis/assets/inside/iss.glb`.
+- **Mir:** [Mir, NASA 3D Resources](https://science.nasa.gov/3d-resources/mir/). Fuente: NASA / Goddard Space Flight Center. Archivo local: `frontend/ignis/assets/inside/mir.glb`.
+
+Los materiales añadidos, interiores ilustrativos y efectos se generan en IGNIS con Three.js. Las texturas de la Tierra proceden de las imágenes Blue Marble y Earth at Night de NASA.
+
 ## Datos incluidos y limitaciones
 
 Se incluye la exportación pública filtrada (`backend/data/public/`), el manifiesto y las imágenes públicas que utiliza la interfaz. No se incluye el historial privado, las bases internas, corpus de texto completo, descargas originales, cachés de modelos, claves ni entornos virtuales. Los simuladores pueden generar su caché al primer uso.

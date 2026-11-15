@@ -107,7 +107,7 @@ function chapterHTML(i) {
       <p>La estación orbita a unos 400 km y da una vuelta a la Tierra cada 90 minutos. Todo a bordo está en caída libre: casi no hay «arriba», así que el aire caliente no sube y la llama no tiene forma de lágrima.</p>
       <p>FLEX se hizo en el laboratorio estadounidense <b>Destiny</b>, dentro del armario de combustión <b>CIR</b> (Combustion Integrated Rack), con el equipo para gotas <b>MDCA</b>.</p>
       <div class="in-facts" id="in-facts"></div>
-      <p class="in-note">Modelo 3D de la ISS: NASA 3D Resources (texturas añadidas por IGNIS). Tierra: imágenes Blue Marble y Earth at Night de NASA.</p></div>`;
+      <p class="in-note">Modelo 3D de la ISS: <a href="https://science.nasa.gov/3d-resources/international-space-station-iss-b/" target="_blank" rel="noopener noreferrer">NASA 3D Resources · NASA / Michael D. Carbajal</a> (texturas añadidas por IGNIS). Tierra: imágenes Blue Marble y Earth at Night de NASA.</p></div>`;
     case "montaje": return `<div class="in-card glass">
       <p class="in-kicker">2 · El montaje</p>
       <h2>Una cámara sellada con una gota en el centro</h2>

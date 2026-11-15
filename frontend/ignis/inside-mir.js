@@ -108,7 +108,7 @@ function chapterHTML(i) {
       <p>La Mir era la estación espacial rusa (1986–2001). El Kvant-1 estaba en la popa del módulo base, y en su extremo se acoplaba una nave: el 24 de febrero era una Soyuz, una de las dos naves de escape.</p>
       <p>Durante un relevo había <b>seis personas a bordo</b>:</p>
       <ul class="in-crew">${Object.values(CREW).map((c) => `<li><i style="background:#${c.color.toString(16).padStart(6, "0")}"></i><b>${esc(c.name)}</b><span>${esc(c.who)}</span></li>`).join("")}</ul>
-      <p class="in-note">Modelo 3D de la Mir: NASA 3D Resources (materiales añadidos por IGNIS). El Kvant-1 y la Soyuz se resaltan por su posición en el modelo.</p></div>`;
+      <p class="in-note">Modelo 3D de la Mir: <a href="https://science.nasa.gov/3d-resources/mir/" target="_blank" rel="noopener noreferrer">NASA 3D Resources · NASA / Goddard Space Flight Center</a> (materiales añadidos por IGNIS). El Kvant-1 y la Soyuz se resaltan por su posición en el modelo.</p></div>`;
     case "reconstruccion": return `<div class="in-card glass in-timeline">
       <p class="in-kicker">2 · Reconstrucción interactiva</p>
       <div class="in-steps" role="tablist" aria-label="Pasos del incendio">${STEPS.map((s, k) => `<button type="button" role="tab" data-step="${k}" aria-selected="${k === 0}" title="${esc(s.t)}">${k + 1}</button>`).join("")}</div>
