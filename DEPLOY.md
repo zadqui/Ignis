@@ -1,5 +1,19 @@
 # Desplegar IGNIS
 
+## Vercel
+
+Importa [zadqui/Ignis](https://github.com/zadqui/Ignis) como proyecto nuevo. Usa la raíz del repositorio (`./`) y el framework **FastAPI**. No selecciones `frontend/` ni `backend/` como Root Directory y deja los comandos de construcción y el directorio de salida con sus valores automáticos.
+
+El punto de entrada es `app.py`; `pyproject.toml` en la raíz contiene solo las dependencias de la web y la API, sin Streamlit, PyMuPDF ni los modelos de extracción. Se sirve únicamente la exportación pública incluida. La caché de los simuladores se escribe en el directorio temporal de cada instancia, porque el código desplegado en Vercel es de solo lectura. La primera consulta puede tardar más mientras se preparan los modelos; esa caché no es persistente.
+
+En **Settings → Environment Variables**, configura `GROQ_API_KEY` como secreto para el entorno que vayas a desplegar. Usa una clave nueva y válida; nunca una clave publicada en el chat o el repositorio. Después de cambiarla, vuelve a desplegar. Sin esa variable, la web funciona y el Laboratorio IA permanece desactivado.
+
+Comprueba `/api/health`, `/api/status` y `/ignis/`. Para publicar mediante CLI, con tu sesión de Vercel iniciada: `npx vercel --prod` desde la raíz.
+
+Documentación oficial: [FastAPI en Vercel](https://vercel.com/docs/frameworks/backend/fastapi) y [runtime Python](https://vercel.com/docs/functions/runtimes/python).
+
+## Despliegue con Docker
+
 IGNIS se despliega como **un solo servicio**: un contenedor que sirve la web (`frontend/`) y la API de solo lectura
 (`/api/*`) en el mismo puerto. No hace falta el proxy de desarrollo (`frontend/serve.py`) ni nada en tu equipo.
 

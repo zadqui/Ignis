@@ -13,6 +13,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import os
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -322,7 +323,8 @@ def _cache_file(db: str, stamp: tuple) -> Path:
     from .common import data_root
 
     key = hashlib.sha256(repr((Path(db).name, stamp)).encode()).hexdigest()[:16]
-    return data_root(Path(db)) / "models" / f"simulators-{key}.pkl"
+    cache_root = Path(os.environ["FIF_MODEL_CACHE"]) if os.environ.get("FIF_MODEL_CACHE") else data_root(Path(db)) / "models"
+    return cache_root / f"simulators-{key}.pkl"
 
 
 @lru_cache(maxsize=4)

@@ -1,0 +1,17 @@
+[project]
+name = "ignis-web"
+version = "0.1.0"
+description = "Public IGNIS website and FastAPI backend on Vercel"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "duckdb>=2.0.0",
+    "pydantic>=2.14.3",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+    "pytz>=2024.1",
+    "scikit-learn>=1.5",
+]
+
+[tool.vercel]
+entrypoint = "app:app"
