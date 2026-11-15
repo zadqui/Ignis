@@ -4,6 +4,7 @@
   "functions": {
     "app.py": {
       "maxDuration": 300,
+      "includeFiles": "{backend/data/public/**,backend/data/media/**,backend/data/psi/files/**,backend/config/**,backend/scenarios/**}",
       "excludeFiles": "{backend/tests/**,backend/docs/**,backend/kaggle/**,backend/reviews/**,backend/.venv/**,backend/data/models/**,**/__pycache__/**,**/*.pyc}"
     }
   }
