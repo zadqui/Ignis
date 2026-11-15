@@ -28,7 +28,7 @@ export function createFloats(host, scroller, items) {
     n.style.left = `${it.x}%`; n.style.top = `${it.y}%`;
     n.style.fontSize = `clamp(${it.min ?? 34}px, ${it.size ?? 5.2}vw, ${it.max ?? 96}px)`;
     n.style.setProperty("--bob", `${5 + (i % 3) * 1.4}s`); n.style.setProperty("--bd", `${-(i * 1.3) % 5}s`);
-    n.innerHTML = `<span class="fb"><span class="fv">${val(it.v)}</span>${it.l ? `<span class="fl">${it.l}</span>` : ""}</span>`;
+    n.innerHTML = `<span class="fb"><span class="fv" data-no-i18n>${val(it.v)}</span>${it.l ? `<span class="fl">${it.l}</span>` : ""}</span>`;
     n.setAttribute("aria-label", `${it.title}. Ver explicación`); n.setAttribute("aria-describedby", "");
     const show = () => {
       tip.innerHTML = `<b>${it.title}</b><p>${val(it.tip)}</p>${it.src ? `<small>Evidencia: ${val(it.src)}</small>` : ""}`;

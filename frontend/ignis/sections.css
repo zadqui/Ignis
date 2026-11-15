@@ -738,3 +738,24 @@ img.inside-mark { width: 28px; height: 28px; object-fit: contain; flex: none; an
 @keyframes ip-flick { from { scale: 1 .9; } to { scale: .92 1.08; } }
 @media (hover: none) { .inside-peek { display: none; } }
 @media (prefers-reduced-motion: reduce) { .inside-peek, .ip-case { transition: opacity .15s linear !important; scale: 1; translate: 0 0; filter: none; } .ip-thumb i { animation: none; } }
+
+/* ---------- Idioma: selector EN | ES ---------- */
+html.i18n-wait body { opacity: 0; }
+body { transition: opacity .2s ease; }
+.lang-switch { display: inline-flex; gap: 2px; padding: 4px; border-radius: 999px; margin-left: 10px; flex: none; }
+.lang-switch button { min-width: 36px; padding: 6px 10px; border: 0; border-radius: 999px; background: transparent; font: inherit; font-size: 12.5px; font-weight: 700;
+  letter-spacing: .06em; color: var(--text-3); cursor: pointer; transition: background .3s var(--ease), color .3s var(--ease); }
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button[aria-pressed="true"] { color: var(--text); background: rgba(147, 120, 240, .3); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .16); }
+.lang-switch button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+@media (max-width: 760px) { .lang-switch { margin-left: 6px; } .lang-switch button { min-width: 30px; padding: 5px 8px; } }
+
+/* ---------- Panel de la portada: flujo de trabajo en seis pasos conectados ---------- */
+.design-start .ds-sub { margin: -6px 0 16px; text-align: center; font-size: 13.5px; color: var(--text-3); }
+.workflow.flow { position: relative; gap: 14px; }
+.workflow.flow li { position: relative; }
+.workflow.flow li + li::before { content: ""; position: absolute; left: -12px; top: 50%; width: 10px; height: 10px; margin-top: -5px;
+  border-top: 1.6px solid rgba(205, 170, 255, .55); border-right: 1.6px solid rgba(205, 170, 255, .55); transform: rotate(45deg); }
+.workflow.flow a { transition: background .4s var(--ease), border-color .4s var(--ease), transform .5s var(--spring); }
+.workflow.flow a:hover { transform: translateY(-2px); }
+@media (max-width: 1080px) { .workflow.flow li + li::before { display: none; } }

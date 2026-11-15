@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IGNIS</title>
-  <meta name="description" content="IGNIS · Explora la investigación de NASA sobre el fuego en el espacio en un mapa de áreas, artículos y fuentes.">
+  <meta name="description" content="IGNIS · Explore NASA research on fire in space: a map of areas, papers and sources, with the original source of every data point.">
   <meta name="theme-color" content="#050408">
+  <!-- Idioma: inglés por defecto; se oculta un instante hasta traducir para que no parpadee el español -->
+  <script>try{if(localStorage.getItem("ignis.lang")!=="es")document.documentElement.classList.add("i18n-wait")}catch(e){document.documentElement.classList.add("i18n-wait")}</script>
   <link rel="stylesheet" href="ignis.css">
   <link rel="stylesheet" href="sections.css">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
@@ -81,9 +83,9 @@
       <!-- Portada: punto de partida para especialistas. Plegado; se despliega al acercarse a la barra de búsqueda -->
       <section class="design-start" id="design-start" aria-labelledby="design-start-h">
        <div class="design-start-inner"><div class="ds-bubble glass">
-        <h2 id="design-start-h">¿Qué estás diseñando?</h2>
-        <div class="env-chips" id="env-chips" role="list"></div>
-        <ol class="workflow" aria-label="Cómo trabajar con IGNIS">
+        <h2 id="design-start-h">Flujo de trabajo</h2>
+        <p class="ds-sub">De una pregunta a la fuente original, en seis pasos.</p>
+        <ol class="workflow flow" aria-label="Cómo trabajar con IGNIS">
           <li><a href="#/busqueda"><b>1</b><span>Busca investigaciones</span><small>por tema, material o condición</small></a></li>
           <li><a href="#/busqueda"><b>2</b><span>Selecciona las relevantes</span><small>para tu entorno</small></a></li>
           <li><a href="#/comparador"><b>3</b><span>Compara condiciones</span><small>O₂, presión, flujo</small></a></li>
@@ -202,6 +204,8 @@
   <div class="sheet-backdrop" id="dossier-backdrop" hidden></div>
   <div class="sheet glass dossier" id="dossier" role="dialog" aria-modal="true" aria-labelledby="dossier-title" hidden></div>
 
+  <script src="i18n-en.js"></script>
+  <script src="i18n.js"></script>
   <script type="module" src="ignis.js"></script>
   <script type="module" src="sections.js"></script>
 </body>

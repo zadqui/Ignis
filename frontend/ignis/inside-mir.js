@@ -10,7 +10,7 @@ import { createFloats } from "./inside-floats.js";
 
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const fmt = (v, d = 2) => (Number.isFinite(v) ? v.toLocaleString("es-ES", { maximumFractionDigits: d }) : "—");
+const fmt = (v, d = 2) => (Number.isFinite(v) ? v.toLocaleString(window.IGNIS_LOCALE || "es-ES", { maximumFractionDigits: d }) : "—");
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const smooth = (x) => x * x * (3 - 2 * x);
 const lerp = (a, b, f) => a + (b - a) * f;

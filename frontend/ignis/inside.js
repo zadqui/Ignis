@@ -11,7 +11,7 @@ import { createFloats } from "./inside-floats.js";
 
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const fmt = (v, d = 2) => (Number.isFinite(v) ? v.toLocaleString("es-ES", { maximumFractionDigits: d }) : "—");
+const fmt = (v, d = 2) => (Number.isFinite(v) ? v.toLocaleString(window.IGNIS_LOCALE || "es-ES", { maximumFractionDigits: d }) : "—");
 const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const smooth = (x) => x * x * (3 - 2 * x);
 const FUEL_ES = { Heptane: "Heptano", Methanol: "Metanol" };
@@ -124,7 +124,7 @@ function chapterHTML(i) {
       </div>
       <p class="in-trial" id="in-trial-l"></p>
       <div class="in-row"><button type="button" class="in-btn" data-replay>${svgI("play")}Volver a encender</button></div>
-      <div class="in-readout" id="in-readout" aria-live="off"></div>
+      <div class="in-readout" id="in-readout" aria-live="off" data-no-i18n></div>
       <p class="in-note" style="margin-top:10px">El diámetro de la gota sigue la ley del d² con los valores reales del ensayo. La forma y el color de la llama son ilustrativos.</p></div>`;
     case "datos": return `<div class="in-wide glass">
       <p class="in-kicker">4 · Lo que midió</p>

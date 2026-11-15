@@ -22,6 +22,10 @@ uv run uvicorn flame_in_freefall.app.api:app --port 8000
 python frontend/serve.py              # abre http://127.0.0.1:5173/ignis/
 ```
 
+## Idioma
+
+La web se abre en **inglés**; el selector **EN | ES** de la cabecera cambia a español y se recuerda en el navegador. Los textos de la web viven en español en el código y [`frontend/ignis/i18n-en.js`](frontend/ignis/i18n-en.js) los traduce en vivo (`i18n.js`). Lo que no está en el diccionario (títulos de artículos, citas literales, respuestas de la IA) se muestra tal cual. Al añadir un texto nuevo en español, añade su traducción a `i18n-en.js`.
+
 ## Páginas
 
 | Página | Qué puedes hacer |

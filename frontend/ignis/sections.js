@@ -6,7 +6,11 @@
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const num = (v, d = 1) => (v === null || v === undefined || Number.isNaN(v) ? "—" : Number(v).toLocaleString("es-MX", { maximumFractionDigits: d }));
+
+// Idioma activo (i18n.js): textos bilingües de la API → el del idioma de la página
+const L = (o) => (o ? o[window.IGNIS_LANG] ?? o.es ?? o.en ?? "" : "");
+const EN_NAME = (e) => (e ? (window.IGNIS_LANG === "en" ? e.name_en ?? e.name_es : e.name_es ?? e.name_en) : "");
+const num = (v, d = 1) => (v === null || v === undefined || Number.isNaN(v) ? "—" : Number(v).toLocaleString(window.IGNIS_LOCALE || "es-MX", { maximumFractionDigits: d }));
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const root = $("#sections");
 
@@ -564,7 +568,7 @@ async function renderConcrete(q = "") {
     </select></span></label>`;
   const what = q ? `para «${esc(q)}»` : "en el sistema";
   const evLabel = CX_FILTERS.find(([k]) => k === cx.ev)?.[1];
-  const scope = [cx.cat && `«${esc(CAT_ES[cx.cat] ?? cx.cat)}»`, design && `«${esc(design.label.es)}»`, evLabel && `«${esc(evLabel.toLowerCase())}»`].filter(Boolean).join(" · ");
+  const scope = [cx.cat && `«${esc(CAT_ES[cx.cat] ?? cx.cat)}»`, design && `«${esc(L(design.label))}»`, evLabel && `«${esc(evLabel.toLowerCase())}»`].filter(Boolean).join(" · ");
 
   // Hallazgos de la decisión de diseño elegida, limitados a las investigaciones que se están mostrando.
   const shown = new Set(list.map((p) => p.inv_id));
@@ -574,20 +578,20 @@ async function renderConcrete(q = "") {
   concreteEl.innerHTML = `
     <div class="panel-g glass cx-facets" role="group" aria-label="Clasificaciones">
       ${facet("cx-cat", "Categoría", "Todas", forCats.length, catKeys.map((c) => [c, CAT_ES[c] ?? c, catCount[c] ?? 0]), cx.cat)}
-      ${groups.length ? facet("cx-design", "Decisión de diseño", "Todas", forDesign.length, groups.map((g) => [g.id, g.label.es, forDesign.filter((p) => inGroup(g, p)).length]), cx.design) : ""}
+      ${groups.length ? facet("cx-design", "Decisión de diseño", "Todas", forDesign.length, groups.map((g) => [g.id, L(g.label), forDesign.filter((p) => inGroup(g, p)).length]), cx.design) : ""}
       ${facet("cx-ev", "Evidencia", "Sin especificar", forEv.length, CX_FILTERS.map(([k, l]) => [k, l, forEv.filter((p) => evidenceOk(k, p, media)).length]), cx.ev)}
       ${cx.cat || design || cx.ev ? `<button class="btn cx-clear" type="button" data-cx-clear>${svg("x")}Quitar selección</button>` : ""}
     </div>
-    ${design ? `<p class="cx-question">${esc(design.question?.es ?? design.label.es)} <span class="muted small">· agrupación propuesta por el equipo, pendiente de revisión</span></p>` : ""}
+    ${design ? `<p class="cx-question">${esc(L(design.question) || L(design.label))} <span class="muted small">· agrupación propuesta por el equipo, pendiente de revisión</span></p>` : ""}
     <div class="catalog">${list.length ? (await Promise.all(list.map((p) => invCard(p, media)))).join("")
       : `<div class="empty">Ninguna investigación ${q ? `de esta búsqueda ` : ""}coincide con esa combinación de categorías y filtros.<br>Que no aparezca no significa que el tema no se haya estudiado. Prueba a quitar un filtro${q ? " o cambia a la búsqueda relacional" : ""}.</div>`}</div>
-    ${design ? `<div class="panel-g glass"><h2>Hallazgos de «${esc(design.label.es)}»</h2>
+    ${design ? `<div class="panel-g glass"><h2>Hallazgos de «${esc(L(design.label))}»</h2>
         <p class="sub">${findings.length} de ${design.n_findings} hallazgos con cita pertenecen a las investigaciones mostradas. Coinciden por palabra clave o por pertenecer a una investigación del grupo.</p>
         ${findings.length ? findings.slice(0, 25).map(findingHTML).join("") : `<div class="empty">Ningún hallazgo extraído de este grupo pertenece a las investigaciones mostradas.</div>`}
         <div class="note" style="margin-top:14px"><b>Cómo leer esto.</b> ${esc(tax.ctrl.warnings.join(" "))}</div></div>` : ""}
     ${tax ? `<details class="panel-g glass cx-earth"><summary><h2>Aplicaciones en la Tierra</h2><span class="sub">Dónde puede servir la misma evidencia fuera del espacio. Propuestas para explorar, no evaluaciones.</span></summary>
         <div class="catalog" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:14px">${tax.earth.groups.map((a) => `
-          <div class="finding"><b>${esc(a.label.es)}</b><p class="small" style="color:var(--text-2);line-height:1.5">${esc(a.why?.es ?? "")}</p>
+          <div class="finding"><b>${esc(L(a.label))}</b><p class="small" style="color:var(--text-2);line-height:1.5">${esc(L(a.why) ?? "")}</p>
           <div class="chips">${a.investigations.map((i) => `<button class="chip" type="button" data-dossier="${esc(i.inv_id)}" style="cursor:pointer">${esc(i.acronym || i.inv_id)}</button>`).join("")}</div>
           <p class="muted small" style="margin:8px 0 0">${a.n_findings} hallazgos relacionados</p></div>`).join("")}</div></details>` : ""}
     <p class="map-note">Resultados ordenados por la relevancia que calcula la API${q ? "" : " (sin término: primero las que tienen imágenes y más ensayos)"}. Las categorías las asigna la API por conceptos documentados; ningún resultado está revisado por científicos.</p>`;
@@ -627,7 +631,7 @@ function sharedBlock(sel, stats, tax) {
     .filter((x) => x.members.length >= 2).sort((a, b) => b.members.length - a.members.length);
   const cats = groupShare(Object.keys({ ...CAT_ES, ...Object.fromEntries(sel.flatMap((p) => (p.categories ?? []).map((c) => [c.category, 1]))) })
     .map((c) => [CAT_ES[c] ?? c, sel.filter((p) => (p.categories ?? []).some((x) => x.category === c)), c]));
-  const designs = groupShare((tax?.ctrl.groups ?? []).map((g) => [g.label.es, sel.filter((p) => g.investigations.some((i) => i.inv_id === p.inv_id)), g.id]));
+  const designs = groupShare((tax?.ctrl.groups ?? []).map((g) => [L(g.label), sel.filter((p) => g.investigations.some((i) => i.inv_id === p.inv_id)), g.id]));
   const all = (x) => x.members.length === sel.length;
   const chips = (xs, cls) => xs.map((x) => `<span class="badge ${all(x) ? cls : ""}" title="${esc(names(x.members))}">${all(x) ? svg("check") : ""}${esc(x.label)}${all(x) ? "" : ` · ${esc(names(x.members))}`}</span>`).join("");
   const row = (label, xs) => `<div class="cmp-share-row"><span class="cx-label">${label}</span><div class="chips">${xs.length ? chips(xs, "info") : `<span class="muted small">Ninguna en común</span>`}</div></div>`;
@@ -708,12 +712,12 @@ async function viewComparador() {
       </div>
       <div class="panel-g glass"><div class="sec-tools" style="justify-content:space-between"><div><h2>Condiciones de los ensayos</h2>
         <p class="sub">Cada punto es un ensayo; una línea es un rango registrado. ${envOk.length ? "Elige un entorno para ver su banda; solo aparecen los entornos con datos de alguna de estas investigaciones." : "Ningún entorno se puede contrastar: estas investigaciones no registran oxígeno, presión ni flujo."}</p></div>
-        ${envOk.length ? `<label class="field"><span class="muted small">Entorno</span><select id="cmp-env"><option value="">Ninguno</option>${envOk.map((e) => `<option value="${e.id}" ${e.id === cmpEnv ? "selected" : ""}>${esc(e.name_es)}</option>`).join("")}</select></label>` : ""}</div>
+        ${envOk.length ? `<label class="field"><span class="muted small">Entorno</span><select id="cmp-env"><option value="">Ninguno</option>${envOk.map((e) => `<option value="${e.id}" ${e.id === cmpEnv ? "selected" : ""}>${esc(EN_NAME(e))}</option>`).join("")}</select></label>` : ""}</div>
         ${dims.length ? dims.map((d) => `<h3>${d.label} (${d.unit})</h3>${stripChart({ rows: sel.map((p) => ({ label: nameOf(p), vals: stats[p.inv_id][d.key].vals })), band: env?.ranges?.[d.key] ?? null, unit: d.unit, title: d.label })}`).join("") + stripLegend(!!env)
           : `<div class="empty">Ninguna de estas investigaciones tiene ensayos con oxígeno, presión o flujo registrados.</div>`}
         ${dims.length && hiddenDims.length ? `<p class="muted small" style="margin:8px 0 0">Sin gráfica: ${esc(listEs(hiddenDims.map((d) => d.label.toLowerCase())))} (ninguna investigación lo registra${env ? " o el entorno no lo define" : ""}).</p>` : ""}
         ${env ? `<div class="note" style="margin-top:12px"><b>Cerca no es validado.</b> Que un ensayo caiga en la banda solo indica condiciones parecidas en esa variable. El entorno es provisional y ningún ensayo registra gravedad.</div>` : ""}
-        <div class="d-actions"><button class="btn primary" type="button" data-ask="Compara ${esc(sel.map((p) => `${nameOf(p)} (${p.inv_id})`).join(", "))}: ¿qué condiciones experimentales y hallazgos son relevantes para ${esc(env ? `${env.name_es} (entorno ${env.id})` : "un hábitat presurizado")} y qué falta saber?">${svg("chat")}Preguntar a la IA sobre esta comparación</button></div>
+        <div class="d-actions"><button class="btn primary" type="button" data-ask="Compara ${esc(sel.map((p) => `${nameOf(p)} (${p.inv_id})`).join(", "))}: ¿qué condiciones experimentales y hallazgos son relevantes para ${esc(env ? `${EN_NAME(env)} (entorno ${env.id})` : "un hábitat presurizado")} y qué falta saber?">${svg("chat")}Preguntar a la IA sobre esta comparación</button></div>
       </div>`;
     $("#cmp-diff").addEventListener("change", (e) => {
       cmpAll = !e.target.checked;
@@ -1072,7 +1076,7 @@ async function viewHistorial() {
   const profiles = await loadProfiles().catch(() => []);
   const P = (id) => profiles.find((p) => p.inv_id === id);
   const T = { doc: ["doc", "Documento abierto"], paper: ["doc", "Investigación consultada"], analysis: ["flask", "Análisis"], question: ["chat", "Pregunta a la IA"] };
-  const when = (iso) => new Date(iso).toLocaleString("es-MX", { dateStyle: "medium", timeStyle: "short" });
+  const when = (iso) => new Date(iso).toLocaleString(window.IGNIS_LOCALE || "es-MX", { dateStyle: "medium", timeStyle: "short" });
   root.innerHTML = `<div class="sec-head"><div><h1>Historial</h1><p>Investigaciones y documentos guardados, investigaciones consultadas, documentos abiertos, análisis y preguntas. Se guarda solo en este navegador.</p></div>
     <div class="sec-tools"><button class="btn" type="button" id="h-clear" ${items.length ? "" : "disabled"}>${svg("trash")}Borrar historial</button></div></div>
     <div class="grid2">
@@ -1102,7 +1106,7 @@ async function homeEnvs() {
   try {
     const envs = await loadEnvs();
     el.innerHTML = envs.map((e) => `<a class="env-chip glass" role="listitem" href="#/comparador" data-cmp-env="${e.id}" title="Comparar investigaciones frente a este entorno">${svg(ENV_ICON[e.id] ?? "station")}
-      <span><b>${esc(e.name_es)}</b><small>O₂ ${e.ranges.o2_pct ? `${num(e.ranges.o2_pct[0])}–${num(e.ranges.o2_pct[1])} %` : "—"} · ${e.ranges.pressure_kpa ? `${num(e.ranges.pressure_kpa[0])}–${num(e.ranges.pressure_kpa[1])} kPa` : "—"}</small></span></a>`).join("");
+      <span><b>${esc(EN_NAME(e))}</b><small>O₂ ${e.ranges.o2_pct ? `${num(e.ranges.o2_pct[0])}–${num(e.ranges.o2_pct[1])} %` : "—"} · ${e.ranges.pressure_kpa ? `${num(e.ranges.pressure_kpa[0])}–${num(e.ranges.pressure_kpa[1])} kPa` : "—"}</small></span></a>`).join("");
   } catch { el.innerHTML = `<span class="muted small">Inicia la API para ver los entornos.</span>`; }
 }
 

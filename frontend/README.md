@@ -112,8 +112,8 @@ Las tolerancias se dibujan con los valores de `backend/scenarios/tolerances.yaml
 
 ## Limitaciones conocidas del prototipo
 
-- Solo está en español. Los textos de limitaciones se reutilizan de `backend/src/flame_in_freefall/app/i18n/es.json`; el
-  inglés queda pendiente.
+- La interfaz se abre en inglés y permite cambiar a español mediante EN | ES. La traducción dinámica usa
+  `ignis/i18n.js` e `ignis/i18n-en.js`; las citas originales y los textos sin traducción conservan su idioma.
 - Carga hasta 2000 hallazgos en el cliente, que es el máximo de la API. Con los datos completos de c1–c4 habrá que
   usar filtros en el servidor.
 - `/findings?include_history=true` puede repetir un hallazgo (inconsistencia conocida de la API); el prototipo

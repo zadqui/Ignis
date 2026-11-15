@@ -4,7 +4,7 @@
 /* ------------------------------------------------------------------ utilidades */
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const n = (v) => Number(v ?? 0).toLocaleString("es-MX");
+const n = (v) => Number(v ?? 0).toLocaleString(window.IGNIS_LOCALE || "es-MX");
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const params = new URLSearchParams(location.search);
