@@ -1,0 +1,319 @@
+{
+  "version": "p-2",
+  "system": "You extract atomic scientific findings from combustion-science documents (NASA PSI).\nA finding is one verifiable statement of exactly one of these types:\n- result: something that was observed, measured or computed in the work described (it already happened).\n- future_work: something the authors say should still be done: a proposed experiment, an open question,\n  a recommendation for further research. It is a proposal, not an observation.\n- limitation: something that limits or qualifies the evidence: an uncertainty, a measurement or data problem,\n  an assumption, a disagreement or comparison the authors say cannot be resolved with the data.\nNever label a proposal as result, and never label an observation as future_work.\nBackground, motivation, descriptions of methods or apparatus, and figure/table captions are NOT findings.\n\nRules:\n1. Extract findings ONLY from the TARGET text. BEFORE/AFTER are context to understand it; quote them only if the\n   TARGET statement continues there.\n2. Every quote must be copied verbatim, character for character, as one contiguous span of the given text.\n   Do not fix spelling, do not join separate passages, do not add ellipses.\n3. Never infer or assume a condition, number or unit that is not written in the text. If it is not stated, use null.\n   Do not use knowledge about the mission, the investigation or typical experiments to fill fields.\n4. Numbers: copy value_text exactly as written (ranges and approximations included, e.g. \"21-40\", \"~0.5\") and the\n   unit exactly as written (or null if no unit is written). Do not convert units. gravity_g only if a numeric\n   gravity level is written; words like \"microgravity\" go to open_facets as name \"gravity_regime\".\n5. claim: a short, self-contained English sentence faithful to the quote; no information beyond the quotes.\n6. direction: effect of `variable` on `effect_on` only when the text states it; otherwise null.\n7. One sentence may contain several findings of different types (for example a result and the limitation that\n   qualifies it, or a result followed by a proposal). Extract each one as a separate finding with the quote that\n   supports it; quotes of different findings may overlap.\n8. Never output the same finding twice: every finding must differ in claim_type or in what it states. When every\n   finding in the TARGET has been listed, close the JSON.\n9. If the TARGET contains no finding, return {\"findings\": []}.\nReturn JSON only.",
+  "user_template": "Document: {doc_title}\nSection: {section_title}\n\nBEFORE:\n{before}\n\nTARGET:\n{target}\n\nAFTER:\n{after}",
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "findings": {
+        "type": "array",
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "properties": {
+            "claim": {
+              "type": "string"
+            },
+            "claim_quote": {
+              "type": "string"
+            },
+            "claim_type": {
+              "enum": [
+                "result",
+                "future_work",
+                "limitation"
+              ]
+            },
+            "variable": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "effect_on": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "direction": {
+              "enum": [
+                "increase",
+                "decrease",
+                "non_monotonic",
+                "threshold",
+                "none",
+                null
+              ]
+            },
+            "conditions": {
+              "type": "object",
+              "properties": {
+                "fuel": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    },
+                    "quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "quote"
+                  ],
+                  "additionalProperties": false
+                },
+                "phase": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    },
+                    "quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "quote"
+                  ],
+                  "additionalProperties": false
+                },
+                "geometry": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    },
+                    "quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "quote"
+                  ],
+                  "additionalProperties": false
+                },
+                "o2": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "value_text": {
+                      "type": "string"
+                    },
+                    "unit": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value_text",
+                    "unit",
+                    "quote"
+                  ],
+                  "additionalProperties": false
+                },
+                "pressure": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "value_text": {
+                      "type": "string"
+                    },
+                    "unit": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value_text",
+                    "unit",
+                    "quote"
+                  ],
+                  "additionalProperties": false
+                },
+                "flow_velocity": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "value_text": {
+                      "type": "string"
+                    },
+                    "unit": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value_text",
+                    "unit",
+                    "quote"
+                  ],
+                  "additionalProperties": false
+                },
+                "gravity_g": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "value_text": {
+                      "type": "string"
+                    },
+                    "unit": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value_text",
+                    "unit",
+                    "quote"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "fuel",
+                "phase",
+                "geometry",
+                "o2",
+                "pressure",
+                "flow_velocity",
+                "gravity_g"
+              ],
+              "additionalProperties": false
+            },
+            "values": {
+              "type": "array",
+              "maxItems": 8,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "quantity": {
+                    "type": "string"
+                  },
+                  "value_text": {
+                    "type": "string"
+                  },
+                  "unit": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "quantity",
+                  "value_text",
+                  "unit",
+                  "quote"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "measurement": {
+              "type": "array",
+              "maxItems": 6,
+              "items": {
+                "type": "string"
+              }
+            },
+            "hazard_stage": {
+              "enum": [
+                "prevention",
+                "detection",
+                "suppression",
+                null
+              ]
+            },
+            "open_facets": {
+              "type": "array",
+              "maxItems": 6,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  },
+                  "quote": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "value",
+                  "quote"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "claim",
+            "claim_quote",
+            "claim_type",
+            "variable",
+            "effect_on",
+            "direction",
+            "conditions",
+            "values",
+            "measurement",
+            "hazard_stage",
+            "open_facets"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "findings"
+    ],
+    "additionalProperties": false
+  },
+  "sha256": "345e3dd8c8acb55a8597d57bd5507651526d591e6f64d015d884668ff826fdcb"
+}

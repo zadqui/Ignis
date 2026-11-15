@@ -1,0 +1,49 @@
+# DRAFT taxonomy for the phase 2 views "safety controls" and "applications on Earth".
+# Assignments are a TEAM PROPOSAL (from the PSI investigation titles and objectives), pending review by the developer
+# or another authorised member. They group evidence for navigation; they are not a scientific classification and they
+# never change a finding's review status. Keywords match finding text (claim/quote) and investigation metadata.
+version: tax-1
+status: draft
+reviewed_by: null
+
+controls:
+  - id: materials
+    label: {es: "Prevención · selección de materiales", en: "Prevention · material selection"}
+    question: {es: "¿Qué materiales arden y cuáles se apagan solos?", en: "Which materials burn and which self-extinguish?"}
+    investigations: [PSI-25, PSI-26, PSI-98, PSI-99, PSI-100, PSI-62]
+    keywords: [flammability, material, flame spread, spread rate, pmma, cotton, nomex, fabric, solid fuel, self-extinguish]
+  - id: detection
+    label: {es: "Detección · humo y aerosoles", en: "Detection · smoke and aerosols"}
+    question: {es: "¿Cómo detectar un incendio antes de que crezca?", en: "How do we detect a fire before it grows?"}
+    investigations: [PSI-101, PSI-102, PSI-115, PSI-47]
+    keywords: [smoke, aerosol, particle size, detector, detection, soot, dust]
+  - id: suppression
+    label: {es: "Supresión · extinción", en: "Suppression · extinguishment"}
+    question: {es: "¿Qué apaga una llama sin gravedad?", en: "What puts out a flame without gravity?"}
+    investigations: [PSI-69, PSI-68, PSI-25, PSI-26]
+    keywords: [suppress, suppressant, extinguish, extinction, carbon dioxide, co2, helium, inert, diluent]
+  - id: atmosphere
+    label: {es: "Combustión y atmósfera", en: "Combustion and atmosphere"}
+    question: {es: "¿Cómo cambian el oxígeno, la presión y el flujo el riesgo?", en: "How do oxygen, pressure and flow change the risk?"}
+    investigations: [PSI-159, PSI-39, PSI-20, PSI-21, PSI-23, PSI-22, PSI-10, PSI-106, PSI-107]
+    keywords: [oxygen concentration, oxygen, pressure, ambient, flow velocity, ventilation, cool flame, ignition]
+
+earth_applications:
+  - id: water_mist
+    label: {es: "Niebla fina de agua", en: "Water mist"}
+    why: {es: "La extinción de gotas y los límites de inflamabilidad ayudan a entender los sistemas de niebla fina.",
+          en: "Droplet extinction and flammability limits inform water-mist systems."}
+    investigations: [PSI-69, PSI-68]
+    keywords: [droplet, mist, spray, water, evaporation]
+  - id: smoke_detection
+    label: {es: "Detectores de humo", en: "Smoke detectors"}
+    why: {es: "El tamaño de partícula del humo determina qué detecta un sensor, en el espacio y en edificios.",
+          en: "Smoke particle size decides what a sensor detects, in space and in buildings."}
+    investigations: [PSI-101, PSI-102, PSI-115, PSI-47]
+    keywords: [smoke, aerosol, particle, detector, soot]
+  - id: firefighting
+    label: {es: "Equipo y estrategias de bomberos", en: "Firefighting equipment and tactics"}
+    why: {es: "Supresores gaseosos, propagación en sólidos y efectos del flujo sirven para extintores y materiales.",
+          en: "Gaseous suppressants, solid flame spread and flow effects inform extinguishers and materials."}
+    investigations: [PSI-69, PSI-68, PSI-25, PSI-26, PSI-98, PSI-99, PSI-100]
+    keywords: [suppress, extinguish, flame spread, carbon dioxide, inert, flammability]

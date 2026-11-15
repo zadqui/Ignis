@@ -1,0 +1,34 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Test Type', 'Test Day*', 'Year', 'Month', 'Date', 'Atmosphere*', 'Fuel Bottle', 'Flames Ignited*', 'Notes']
+config_id: PSI-23__ACME_s_Flame
+version: 1
+source:
+  inv_id: PSI-23
+  file_name: PSI-23_Experimental table_ACME s-Flame.csv
+  resource_id: res-133cdb8d5c0b0e1b
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: test_day
+grain_source: 'heuristic: header ''Flames Ignited'' (rows aggregate a test day)'
+trial_id:
+  column: Test Day*
+  normalize: strip_whitespace
+  evidence: 0/18 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel Bottle
+    interpretation_verified: false
+  n_ignited:
+    columns:
+    - Flames Ignited*
+    interpretation_verified: false

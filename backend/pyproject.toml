@@ -1,0 +1,58 @@
+[project]
+name = "flame-in-freefall"
+version = "0.1.0"
+description = "Flame in Freefall: PSI combustion knowledge-gap mapper"
+authors = [
+    { name = "Max" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=2.0.0",
+    "pydantic>=2.14.3",
+    "pymupdf>=2.1",
+    "pyyaml>=6.0.3",
+    "requests>=2.34.2",
+    # DuckDB imports pytz to convert TIMESTAMPTZ columns; pandas no longer pulls it in on fresh installs
+    "pytz>=2024.1",
+]
+
+[project.optional-dependencies]
+nli = ["transformers>=4.46", "torch>=2.5"]
+# NLI classifier + M5 embeddings (multilingual-e5-small), CPU
+ml = ["transformers>=4.46", "torch>=2.5"]
+# M7 read-only API + panel
+app = ["fastapi>=0.115", "uvicorn>=0.30", "streamlit>=1.40", "httpx>=0.27", "altair>=5"]
+# Phase 2: lightweight exploratory predictors (CPU, milliseconds per request)
+predict = ["scikit-learn>=1.5"]
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
+
+[project.scripts]
+fif-inventory = "flame_in_freefall.psi.cli:main"
+fif-trials = "flame_in_freefall.trials.cli:main"
+fif-corpus = "flame_in_freefall.corpus.cli:main"
+fif-findings = "flame_in_freefall.findings.cli:main"
+fif-scenarios = "flame_in_freefall.scenarios.cli:main"
+fif-relations = "flame_in_freefall.relations.cli:main"
+fif-app = "flame_in_freefall.app.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["live: hits the real PSI API (deselected by default; run with -m live)"]
+addopts = "-m 'not live'"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+# standalone Kaggle notebook scripts: broad excepts are deliberate (every failure is reported in env.json)
+"kaggle/*" = ["BLE001", "PLW1510", "SIM115"]

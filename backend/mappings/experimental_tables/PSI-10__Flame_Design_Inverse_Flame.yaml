@@ -1,0 +1,40 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Flame Type', 'Day', 'Test', 'XO2', 'mO2 (mg/s)', 'mN2 (mg/s)', 'mtot (mg/s)', 'XC2H4 initial', 'XC2H4 final', 'pinit (atm)', 'pfinal (atm)', 'pmean (atm)', 'mean Zst', 'Tad (K)']
+config_id: PSI-10__Flame_Design_Inverse_Flame
+version: 1
+source:
+  inv_id: PSI-10
+  file_name: PSI-10_Experimental table_Flame Design_Inverse Flame.csv
+  resource_id: res-0ccf4f7dffd64029
+review:
+  status: draft
+  priority: high
+  reviewed_by: null
+  reviewed_on: null
+  notes:
+  - 'pressure: 3 columns combined as min/max envelope: [''pinit (atm)'', ''pfinal (atm)'', ''pmean (atm)'']'
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: Test
+  normalize: strip_whitespace
+  evidence: 119/120 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  o2:
+    columns:
+    - XO2
+    suggestion: fraction — 'X' conventionally denotes mole fraction; confirm in documentation
+    interpretation_verified: false
+  pressure:
+    columns:
+    - pinit (atm)
+    - pfinal (atm)
+    - pmean (atm)
+    unit: atm
+    unit_source: header
+    interpretation_verified: false

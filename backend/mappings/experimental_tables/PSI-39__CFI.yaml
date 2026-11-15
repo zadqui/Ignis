@@ -1,0 +1,39 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Flex Number', 'Test Date', 'Local Time', 'CIR', 'Pressure', 'Oxygen', 'Nitrogen', 'Helium', 'Fiber', 'Fuel']
+config_id: PSI-39__CFI
+version: 1
+source:
+  inv_id: PSI-39
+  file_name: PSI-39_Experimental table_CFI.csv
+  resource_id: res-4dbfd6e7064ff949
+review:
+  status: draft
+  priority: high
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: Flex Number
+  normalize: strip_whitespace
+  evidence: '0/87 normalised ids equal an inventory path segment; other candidates: [''Test Date'', ''CIR'']'
+o2_location: unknown
+o2_location_source: null
+fields:
+  pressure:
+    columns:
+    - Pressure
+    interpretation_verified: false
+  o2:
+    columns:
+    - Oxygen
+    suggestion: fraction? values look like 0.21; confirm in documentation
+    interpretation_verified: false
+  fuel:
+    columns:
+    - Fuel
+    interpretation_verified: false

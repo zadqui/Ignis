@@ -1,0 +1,38 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Sample Type', 'SAME Test #', 'Description', 'Date', 'Inlet velocity (cm/s)', 'Rt/R0', 'Duration (sec)', 'Primary aging time (sec)', 'Primary mixing time (sec)', 'Net aging time (sec)']
+config_id: PSI-101__SAME_R
+version: 1
+source:
+  inv_id: PSI-101
+  file_name: PSI-101_Experimental table_SAME-R.csv
+  resource_id: res-d015cc320189b9c5
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: 'SAME Test #'
+  normalize: strip_whitespace
+  evidence: 0/109 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  flow_velocity:
+    columns:
+    - Inlet velocity (cm/s)
+    unit: cm/s
+    unit_source: header
+    interpretation_verified: false
+  duration:
+    columns:
+    - Duration (sec)
+    unit: sec
+    unit_source: header
+    interpretation_verified: false

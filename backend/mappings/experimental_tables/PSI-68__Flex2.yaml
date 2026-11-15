@@ -1,0 +1,45 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Sample (Fuel Type)', 'Initial Droplet Diameter (mm)', 'Ambient Gas Mixture', 'Oxygen Mole Fraction', 'Ambient Pressure (atm)', 'Ambient Temperature (C)', 'Flow Velocity (cm/s)']
+config_id: PSI-68__Flex2
+version: 1
+source:
+  inv_id: PSI-68
+  file_name: PSI-68_Experimental table_Flex2.csv
+  resource_id: res-d50d259b87626b56
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: condition_matrix
+grain_source: 'heuristic: most condition cells are ranges/lists (tested envelope, not trials)'
+trial_id: null
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Sample (Fuel Type)
+    interpretation_verified: false
+  o2:
+    columns:
+    - Oxygen Mole Fraction
+    unit: mole fraction
+    unit_source: header
+    interpretation_verified: false
+  pressure:
+    columns:
+    - Ambient Pressure (atm)
+    unit: atm
+    unit_source: header
+    interpretation_verified: false
+  flow_velocity:
+    columns:
+    - Flow Velocity (cm/s)
+    unit: cm/s
+    unit_source: header
+    interpretation_verified: false

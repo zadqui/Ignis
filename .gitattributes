@@ -1,0 +1,2 @@
+# Real PSI tables used as fixtures: keep bytes exact (encoding + CRLF are under test)
+backend/tests/fixtures/tables/*.csv -text

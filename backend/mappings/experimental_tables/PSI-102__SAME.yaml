@@ -1,0 +1,36 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Sample #', 'Sample Material', 'Air Flow (cm/s)', 'Weight loss rate (mg/min)', 'Aging Duration (minutes)']
+config_id: PSI-102__SAME
+version: 1
+source:
+  inv_id: PSI-102
+  file_name: PSI-102_Experimental table_SAME.csv
+  resource_id: res-6f6b8fb60cd9af51
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: 'Sample #'
+  normalize: strip_whitespace
+  evidence: 0/8 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Sample Material
+    interpretation_verified: false
+  flow_velocity:
+    columns:
+    - Air Flow (cm/s)
+    unit: cm/s
+    unit_source: header
+    interpretation_verified: false

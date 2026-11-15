@@ -1,0 +1,7 @@
+# Human-reviewed text-use permissions (M3). Only with a VERIFIABLE source.
+# - target: <document sha256 or work DOI>
+#   permission: allowed | metadata_only | unclear
+#   basis: <URL or citation of the licence/permission statement>
+#   reviewed_by: <name>
+#   reviewed_on: YYYY-MM-DD
+[]

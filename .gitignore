@@ -1,0 +1,22 @@
+# Entornos, secretos y archivos generados
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+node_modules/
+.env
+.env.*
+!.env.example
+kaggle.json
+*.pem
+*.key
+backend/data/**
+!backend/data/public/
+!backend/data/public/**
+!backend/data/media/
+!backend/data/media/**
+!backend/data/psi/
+!backend/data/psi/files/
+!backend/data/psi/files/**/
+!backend/data/psi/files/**/*Representative Image*

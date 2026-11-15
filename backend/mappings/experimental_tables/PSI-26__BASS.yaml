@@ -1,0 +1,30 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Date', 'GMT', 'As Run Test #', 'Test #', 'Sample #', 'Fuel Sample Material']
+config_id: PSI-26__BASS
+version: 1
+source:
+  inv_id: PSI-26
+  file_name: PSI-26_Experimental table_BASS.csv
+  resource_id: res-08072d43e98f8b24
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: 'As Run Test #'
+  normalize: strip_whitespace
+  evidence: '0/121 normalised ids equal an inventory path segment; other candidates: [''Test #'', ''Sample #'']'
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel Sample Material
+    interpretation_verified: false

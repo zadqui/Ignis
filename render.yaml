@@ -1,0 +1,14 @@
+# Render Blueprint: un servicio web Docker con la web de IGNIS y la API de solo lectura.
+# En Render: New → Blueprint → este repositorio. Pedirá GROQ_API_KEY (opcional, solo para el Laboratorio IA).
+services:
+  - type: web
+    name: ignis
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false

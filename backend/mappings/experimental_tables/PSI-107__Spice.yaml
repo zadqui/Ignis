@@ -1,0 +1,33 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['GMT date', 'GMT ignition', 'GMT Flame Off', 'Fuel', 'Nozzle (mm)', 'Fuel Rate (sccm)', 'Fuel Rate (mg/s)', 'HC Fuel Rate (mg/s)', 'Air Rate (cm/s)']
+config_id: PSI-107__Spice
+version: 1
+source:
+  inv_id: PSI-107
+  file_name: PSI-107_Experimental table_Spice.csv
+  resource_id: res-4c127ef702d8b475
+review:
+  status: draft
+  priority: high
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id: null
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel
+    interpretation_verified: false
+  flow_velocity:
+    columns:
+    - Air Rate (cm/s)
+    unit: cm/s
+    unit_source: header
+    interpretation_verified: false

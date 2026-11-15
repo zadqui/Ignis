@@ -1,0 +1,65 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Flame Type', 'Day', 'Fuel', 'Test', 'Cool flame?', 'XO2 before test', 'XO2 after test', 'approx p (bar)', 'Xf', 'mHC (mg/s)', 'TFP', 'Tad (K)', 'Zst', 'Hot ignition', 'burn time (sec)', 'Self-ext or flow term', 'Peak burner T (C )', 'Comments']
+config_id: PSI-159__CFI_G_Normal_Flames
+version: 1
+source:
+  inv_id: PSI-159
+  file_name: PSI-159_Experimental table_CFI-G_Normal Flames.csv
+  resource_id: res-ce23174c0a76de7e
+review:
+  status: draft
+  priority: high
+  reviewed_by: null
+  reviewed_on: null
+  notes:
+  - 'o2: 2 columns combined as min/max envelope: [''XO2 before test'', ''XO2 after test'']'
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: Test
+  normalize: strip_whitespace
+  evidence: 175/179 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel
+    interpretation_verified: false
+  o2:
+    columns:
+    - XO2 before test
+    - XO2 after test
+    suggestion: fraction — 'X' conventionally denotes mole fraction; confirm in documentation
+    interpretation_verified: false
+  pressure:
+    columns:
+    - approx p (bar)
+    unit: bar
+    unit_source: header
+    interpretation_verified: false
+  ignition:
+    columns:
+    - Hot ignition
+    codes:
+      'yes': true
+      'no': false
+    codes_source: literal Yes/No values under header 'Hot ignition'
+    interpretation_verified: false
+  duration:
+    columns:
+    - burn time (sec)
+    unit: sec
+    unit_source: header
+    interpretation_verified: false
+  termination:
+    columns:
+    - Self-ext or flow term
+    codes:
+      se: self_extinguished
+      ft: flow_terminated
+    codes_source: header text 'Self-ext or flow term' (SE / FT)
+    interpretation_verified: false

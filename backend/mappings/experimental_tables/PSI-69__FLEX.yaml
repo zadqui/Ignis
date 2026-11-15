@@ -1,0 +1,47 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['FLEX Test #', 'FLEX Identifier', 'Test Date', 'Test GMT', 'Fuel', 'Ambient pressure; mmHg', 'O initial ambient composition; mole fraction', 'N initial ambient composition; mole fraction', 'CO initial ambient composition; mole fraction', 'He initial ambient composition; mole fraction', 'Droplet initial diameter; mm', 'Visible flame extinction diameter; mm', 'Burning rate; mm', 'Burn time; s', 'Test end']
+config_id: PSI-69__FLEX
+version: 1
+source:
+  inv_id: PSI-69
+  file_name: PSI-69_Experimental table_FLEX.csv
+  resource_id: res-1731618243a768f4
+review:
+  status: draft
+  priority: high
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: FLEX Identifier
+  normalize: strip_whitespace
+  evidence: '259/274 normalised ids equal an inventory path segment; other candidates: [''FLEX Test #'', ''Test
+    Date'', ''Test GMT'']'
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel
+    interpretation_verified: false
+  pressure:
+    columns:
+    - Ambient pressure; mmHg
+    unit: mmHg
+    unit_source: header
+    interpretation_verified: false
+  duration:
+    columns:
+    - Burn time; s
+    unit: s
+    unit_source: header
+    interpretation_verified: false
+  termination:
+    columns:
+    - Test end
+    interpretation_verified: false

@@ -1,0 +1,83 @@
+# EXPLORATORY simulators trained on PSI tabulated trials (public export only). Status: draft, not validated.
+# * Features and targets are read from the ORIGINAL table columns; the unit is the one written in the header.
+#   Where the header lost a subscript (e.g. "O", "CO"), the reading is shown as an unverified interpretation.
+# * Validation is grouped (whole test days are held out), so the score reflects new campaigns, not memorised rows.
+# * No gravity input: no trial records gravity. Nothing here extrapolates to lunar or Martian gravity.
+# * Values outside the training range are flagged; the simulator never pretends to know them.
+version: pm-1
+status: exploratory
+reviewed_by: null
+
+models:
+  - id: flex_burn_time
+    inv_id: PSI-69
+    title: {es: "FLEX · tiempo de combustión de una gota", en: "FLEX · droplet burn time"}
+    question: {es: "¿Cuánto arde una gota de combustible según la atmósfera?", en: "How long does a fuel droplet burn for a given atmosphere?"}
+    task: regression
+    target: {column: "Burn time; s", unit: s, label: {es: "Tiempo de combustión", en: "Burn time"}}
+    group: ["Test Date"]
+    features:
+      - {column: "Ambient pressure; mmHg", unit: mmHg, label: {es: "Presión ambiente", en: "Ambient pressure"}}
+      - {column: "O initial ambient composition; mole fraction", unit: "fracción molar",
+         label: {es: "Oxígeno inicial (O₂)", en: "Initial oxygen (O₂)"},
+         interpretation: "header reads 'O'; read as O2 (subscript lost in the CSV), not verified"}
+      - {column: "CO initial ambient composition; mole fraction", unit: "fracción molar",
+         label: {es: "Dióxido de carbono inicial (CO₂)", en: "Initial carbon dioxide (CO₂)"},
+         interpretation: "header reads 'CO'; read as CO2 (subscript lost in the CSV), not verified"}
+      - {column: "He initial ambient composition; mole fraction", unit: "fracción molar",
+         label: {es: "Helio inicial", en: "Initial helium"}}
+      - {column: "Droplet initial diameter; mm", unit: mm, label: {es: "Diámetro inicial de la gota", en: "Initial droplet diameter"}}
+      - {column: "Fuel", type: category, label: {es: "Combustible", en: "Fuel"}}
+
+  - id: flex_test_end
+    inv_id: PSI-69
+    title: {es: "FLEX · cómo termina la combustión", en: "FLEX · how the burn ends"}
+    question: {es: "¿La gota se extingue, se rompe o se consume por completo?", en: "Does the droplet extinguish, disrupt or burn out?"}
+    task: classification
+    target: {column: "Test end", label: {es: "Final del ensayo", en: "Test end"},
+             classes: {Extinction: "Extinción", Disruption: "Ruptura", Completion: "Consumo completo"}}
+    group: ["Test Date"]
+    features:
+      - {column: "Ambient pressure; mmHg", unit: mmHg, label: {es: "Presión ambiente", en: "Ambient pressure"}}
+      - {column: "O initial ambient composition; mole fraction", unit: "fracción molar",
+         label: {es: "Oxígeno inicial (O₂)", en: "Initial oxygen (O₂)"},
+         interpretation: "header reads 'O'; read as O2 (subscript lost in the CSV), not verified"}
+      - {column: "CO initial ambient composition; mole fraction", unit: "fracción molar",
+         label: {es: "Dióxido de carbono inicial (CO₂)", en: "Initial carbon dioxide (CO₂)"},
+         interpretation: "header reads 'CO'; read as CO2 (subscript lost in the CSV), not verified"}
+      - {column: "He initial ambient composition; mole fraction", unit: "fracción molar",
+         label: {es: "Helio inicial", en: "Initial helium"}}
+      - {column: "Droplet initial diameter; mm", unit: mm, label: {es: "Diámetro inicial de la gota", en: "Initial droplet diameter"}}
+      - {column: "Fuel", type: category, label: {es: "Combustible", en: "Fuel"}}
+
+  - id: cfig_hot_ignition
+    inv_id: PSI-159
+    title: {es: "CFI-G · ¿se enciende la llama caliente?", en: "CFI-G · does a hot flame ignite?"}
+    question: {es: "¿Con qué condiciones prende una llama esférica en un quemador poroso?", en: "Which conditions ignite a spherical flame on a porous burner?"}
+    task: classification
+    target: {column: "Hot ignition", label: {es: "Ignición caliente", en: "Hot ignition"},
+             classes: {"yes": "Sí", "no": "No"}, normalize: lower, exclude: ["flash"]}
+    group: ["Flame Type", "Day"]
+    features:
+      - {column: "approx p (bar)", unit: bar, label: {es: "Presión aproximada", en: "Approximate pressure"}}
+      - {column: "XO2", unit: "fracción molar", label: {es: "Oxígeno en el oxidante (XO₂)", en: "Oxidizer oxygen (XO₂)"}}
+      - {column: "Xf before test", unit: "fracción molar", label: {es: "Fracción de combustible", en: "Fuel fraction"}}
+      - {column: "HC burnrate (mg/s)", unit: "mg/s", label: {es: "Caudal de combustible", en: "Fuel flow"}}
+      - {column: "Flame Type", type: category, normalize: lower, label: {es: "Tipo de llama", en: "Flame type"}}
+      - {column: "Fuel", type: category, label: {es: "Combustible", en: "Fuel"}}
+
+  - id: cfig_burn_time
+    inv_id: PSI-159
+    title: {es: "CFI-G · duración de la llama encendida", en: "CFI-G · burn time of an ignited flame"}
+    question: {es: "Si la llama prende, ¿cuánto dura?", en: "If the flame ignites, how long does it last?"}
+    task: regression
+    target: {column: "burn time (sec)", unit: s, label: {es: "Tiempo de combustión", en: "Burn time"}}
+    filter: {column: "Hot ignition", normalize: lower, equals: "yes"}
+    group: ["Flame Type", "Day"]
+    features:
+      - {column: "approx p (bar)", unit: bar, label: {es: "Presión aproximada", en: "Approximate pressure"}}
+      - {column: "XO2", unit: "fracción molar", label: {es: "Oxígeno en el oxidante (XO₂)", en: "Oxidizer oxygen (XO₂)"}}
+      - {column: "Xf before test", unit: "fracción molar", label: {es: "Fracción de combustible", en: "Fuel fraction"}}
+      - {column: "HC burnrate (mg/s)", unit: "mg/s", label: {es: "Caudal de combustible", en: "Fuel flow"}}
+      - {column: "Flame Type", type: category, normalize: lower, label: {es: "Tipo de llama", en: "Flame type"}}
+      - {column: "Fuel", type: category, label: {es: "Combustible", en: "Fuel"}}

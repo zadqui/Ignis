@@ -1,0 +1,38 @@
+# M5 configuration. EXPLORATORY parameters, versioned: change values => bump version.
+version: rc-2
+status: exploratory
+approved: "developer, 2026-11-13 (initial, exploratory); rc-2 run policy decided by the developer 2026-11-13"
+
+# One active run per unit: the most recent run whose output for that unit passed parsing (ok or empty), EXCEPT
+# that a later run with no machine_verified finding for the unit (empty, or all rejected) never automatically
+# replaces an earlier run that has one; the held replacement goes to m5_supersession_holds for human review.
+# Older runs stay as history and never count as independent evidence. (rc-1: latest_verified_per_unit.)
+run_policy: latest_parsed_no_empty_override
+
+embedding:                       # used ONLY to retrieve candidate pairs and vocabulary proposals
+  model: intfloat/multilingual-e5-small
+  revision: 614241f622f53c4eeff9890bdc4f31cfecc418b3   # pinned (MIT licence)
+  prefix: "query: "              # e5 model card: "query: " on both sides for symmetric similarity tasks
+  pooling: mean                  # average pooling over the attention mask, then L2 normalisation
+  max_length: 512
+  device: cpu
+
+neighbors:
+  # KNOWN LIMITATION (13 nov 2026): with the current 22 active findings e5-small scores unrelated claims at ~0.80
+  # (median of retrieved pairs 0.85), so tau 0.80 does NOT discriminate: retrieval is close to random and
+  # related_topic links are exploratory candidates only. Kept as the documented initial value until a labelled
+  # evaluation (docs/m5_similarity_eval.md) shows that another value improves retrieval.
+  tau: 0.80                      # cosine threshold (exploratory)
+  k: 5                           # neighbours per finding (exploratory)
+
+rule_version: rr-1
+# Conditions compared by code for every candidate pair (numeric ones use the M6 tolerances, scenarios/tolerances.yaml)
+essential_conditions: [o2, pressure, flow_velocity, gravity_g, gravity_regime, fuel, geometry, phase]
+
+# direction = "none" is accepted only if the claim quote states the absence of an effect explicitly
+no_effect_cues: ["no effect", "no significant", "not affect", "did not affect", "does not affect", "no change",
+                 "unchanged", "unaltered", "independent of", "insensitive to", "no dependence", "remained constant",
+                 "remains unaltered", "no measurable", "not influenced", "no influence"]
+# 'extends' needs an explicit statement of extended scope in a quote (disjoint ranges alone are not enough)
+extension_cues: ["extend", "extended", "extends", "beyond", "for the first time", "wider range", "broader range",
+                 "previously untested", "not previously", "new regime", "expanded"]

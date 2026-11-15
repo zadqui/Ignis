@@ -1,0 +1,26 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Data ID', 'Data Description', 'Reference Publication Link', 'Figure ID in Reference']
+config_id: PSI-142__Data_Summary_Table
+version: 1
+source:
+  inv_id: PSI-142
+  file_name: PSI-142_Experimental table_Data Summary Table.csv
+  resource_id: res-d47201606b9dd14c
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: publication_index
+grain_source: 'heuristic: header ''Reference Publication Link'' (rows index published figures)'
+trial_id:
+  column: Data ID
+  normalize: strip_whitespace
+  evidence: 0/8 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields: {}

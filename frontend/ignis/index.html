@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IGNIS</title>
+  <meta name="description" content="IGNIS · Explora la investigación de NASA sobre el fuego en el espacio en un mapa de áreas, artículos y fuentes.">
+  <meta name="theme-color" content="#050408">
+  <link rel="stylesheet" href="ignis.css">
+  <link rel="stylesheet" href="sections.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+</head>
+<body data-view="home">
+  <!-- Resplandor que sigue al cursor (paleta #230443 · #2b064d · #340856) -->
+  <div class="aurora" aria-hidden="true"></div>
+  <!-- Llama esférica, como arde el fuego en microgravedad (ilustrativa) -->
+  <canvas class="flame" aria-hidden="true"></canvas>
+
+  <div class="page">
+    <header class="top">
+      <div class="brand-wrap">
+      <a class="brand" href="./" id="brand" aria-label="IGNIS, inicio">
+        <img class="brand-mark brand-logo" src="assets/brand/ignis-color-96.png" srcset="assets/brand/ignis-color-96.png 1x, assets/brand/ignis-color-256.png 2.5x" alt="" aria-hidden="true">
+        <span>IGNIS</span>
+      </a>
+      <span class="brand-sep" aria-hidden="true"></span>
+      <!-- IGNIS Inside: un experimento por dentro (inside.js, se carga al abrir) -->
+      <div class="inside-wrap">
+      <a class="inside-entry glass" href="#/inside" id="inside-entry" aria-label="IGNIS Inside: experiencias en 3D dentro de la investigación" aria-describedby="inside-peek">
+        <img class="inside-mark" src="assets/brand/ignis-white-96.png" srcset="assets/brand/ignis-white-96.png 1x, assets/brand/ignis-white-256.png 2.5x" alt="" aria-hidden="true">
+        <span>Inside</span>
+      </a>
+      <!-- Al pasar el ratón (o con el foco), la cápsula cuenta qué hay dentro -->
+      <div class="inside-peek glass" id="inside-peek" role="group" aria-label="Experiencias de IGNIS Inside">
+        <p class="ip-head"><b>2 experiencias</b> en 3D, dentro de la investigación</p>
+        <a class="ip-case" href="#/inside" data-inside-case>
+          <span class="ip-thumb flex" aria-hidden="true"><i></i></span>
+          <span class="ip-text"><b>FLEX</b><small>Una gota ardiendo en la ISS y la ley del d²</small></span>
+        </a>
+        <a class="ip-case" href="#/inside/mir" data-inside-case>
+          <span class="ip-thumb mir" aria-hidden="true"><i></i></span>
+          <span class="ip-text"><b>Mir 1997</b><small>El incendio a bordo, paso a paso</small></span>
+        </a>
+      </div>
+      </div>
+      </div>
+      <nav class="nav glass" id="nav" aria-label="Secciones">
+        <a href="./" data-route="">Inicio</a>
+        <a href="#/busqueda" data-route="busqueda">Búsqueda</a>
+        <a href="#/comparador" data-route="comparador">Comparador</a>
+        <a href="#/laboratorio" data-route="laboratorio">Laboratorio IA</a>
+        <a href="#/datos" data-route="datos">Acceso a datos</a>
+        <a href="#/historial" data-route="historial">Historial</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="intro" id="intro">
+        <div class="intro-inner">
+          <h1 class="reveal" style="--d:1">El fuego en microgravedad,<br><span class="dim">según NASA.</span></h1>
+          <p class="lede reveal" style="--d:2">Busca un tema o elige tu entorno: IGNIS reúne las investigaciones de NASA PSI que aplican, compara sus condiciones y te lleva a la fuente original de cada dato.</p>
+        </div>
+      </div>
+
+      <div class="search-box reveal" style="--d:3">
+        <form class="search glass" role="search" id="search" autocomplete="off">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+          <label class="sr" for="q">Buscar en las investigaciones</label>
+          <input id="q" type="search" placeholder="Busca un tema: humo, gotas, propagación de llama…" autocomplete="off" spellcheck="false"
+            role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list">
+          <kbd class="hint" aria-hidden="true">/</kbd>
+          <button class="go" type="submit" aria-label="Buscar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+        <div class="suggest" id="suggest" role="listbox" aria-label="Sugerencias de búsqueda" hidden></div>
+      </div>
+
+      <!-- Portada: punto de partida para especialistas. Plegado; se despliega al acercarse a la barra de búsqueda -->
+      <section class="design-start" id="design-start" aria-labelledby="design-start-h">
+       <div class="design-start-inner"><div class="ds-bubble glass">
+        <h2 id="design-start-h">¿Qué estás diseñando?</h2>
+        <div class="env-chips" id="env-chips" role="list"></div>
+        <ol class="workflow" aria-label="Cómo trabajar con IGNIS">
+          <li><a href="#/busqueda"><b>1</b><span>Busca investigaciones</span><small>por tema, material o condición</small></a></li>
+          <li><a href="#/busqueda"><b>2</b><span>Selecciona las relevantes</span><small>para tu entorno</small></a></li>
+          <li><a href="#/comparador"><b>3</b><span>Compara condiciones</span><small>O₂, presión, flujo</small></a></li>
+          <li><a href="#/datos"><b>4</b><span>Analiza datos</span><small>filtra y exporta los ensayos</small></a></li>
+          <li><a href="#/laboratorio"><b>5</b><span>Pregunta a la IA</span><small>con citas verificables</small></a></li>
+          <li><a href="#/busqueda"><b>6</b><span>Verifica la fuente</span><small>cita y documento original</small></a></li>
+        </ol>
+       </div></div>
+      </section>
+
+      <!-- Búsqueda: modo relacional (mapa de burbujas) o concreto (por categorías de la API) -->
+      <section class="map" id="map" aria-label="Resultados de la búsqueda" hidden>
+        <div class="mode-bar">
+          <div class="mode-wrap">
+            <span class="mode-opt" id="mode-rel" aria-hidden="true">Relacional</span>
+            <button class="mode-switch" id="mode-switch" type="button" role="switch" aria-checked="false"
+              aria-label="Búsqueda concreta por categorías" aria-describedby="mode-hint">
+              <span class="mode-thumb" aria-hidden="true"></span>
+            </button>
+            <span class="mode-opt" id="mode-con" aria-hidden="true">Concreta</span>
+            <div class="mode-hint glass" id="mode-hint" role="status" hidden>
+              <button class="mode-hint-x" type="button" id="mode-hint-x" aria-label="Cerrar aviso">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+              </button>
+              <b>Cambiar tipo de búsqueda</b>
+              <span><em>Relacional</em>: burbujas que agrupan los documentos por afinidad.</span>
+              <span><em>Concreta</em>: investigaciones según las categorías en que las clasifica la API.</span>
+              <small>Puedes cambiar de una a otra en cualquier momento.</small>
+            </div>
+          </div>
+        </div>
+        <div class="map-head">
+          <div class="map-titles">
+            <p class="map-summary" id="map-summary" aria-live="polite"></p>
+            <p class="map-area" id="map-area" aria-live="polite" hidden></p>
+          </div>
+          <button class="pill pill-link" id="zoom-out" type="button" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            Todas las áreas
+          </button>
+        </div>
+        <div class="map-body">
+          <div class="stage" id="stage">
+            <div class="stage-msg" id="stage-msg" hidden></div>
+          </div>
+          <aside class="list glass" aria-label="Documentos">
+            <div class="list-head">
+              <div class="list-title" id="list-title"></div>
+              <div class="list-tools">
+                <label class="switch">
+                  <input type="checkbox" id="only-oa">
+                  <span class="track" aria-hidden="true"></span>
+                  Solo acceso abierto
+                </label>
+                <label class="sr" for="sort">Ordenar</label>
+                <select id="sort">
+                  <option value="relevance">Más relevantes</option>
+                  <option value="year">Más recientes</option>
+                  <option value="cited">Más citados</option>
+                </select>
+              </div>
+            </div>
+            <div class="items" id="items"></div>
+          </aside>
+        </div>
+        <p class="map-note" id="map-note"></p>
+        <!-- Modo concreto (lo pinta sections.js) -->
+        <div class="concrete" id="concrete" aria-live="polite"></div>
+      </section>
+
+      <!-- Secciones de trabajo (sections.js) -->
+      <section class="sections" id="sections" aria-live="polite"></section>
+    </main>
+
+  </div>
+
+  <div class="tip" id="tip" role="tooltip" hidden></div>
+
+  <!-- Ficha de una investigación destacada -->
+  <div class="sheet-backdrop" id="backdrop" hidden></div>
+  <div class="sheet glass" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+    <button class="close" id="close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="sheet-head">
+      <div>
+        <div class="sheet-meta" id="sheet-meta"></div>
+        <h3 id="sheet-title"></h3>
+        <p class="sheet-sub" id="sheet-sub"></p>
+      </div>
+      <span class="pill">Investigación</span>
+    </div>
+    <div class="rule"></div>
+    <div class="tiles" id="tiles" role="tablist" aria-label="Secciones de la investigación"></div>
+    <div class="panel-wrap" id="panel-wrap"><div class="panel" id="panel" role="tabpanel"></div></div>
+    <div class="rule"></div>
+    <div class="sheet-foot">
+      <div class="sheet-actions">
+        <button class="pill pill-link" id="to-map" type="button">
+          Ver en el mapa
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <a class="pill pill-link" id="source" target="_blank" rel="noopener">
+          Ver fuente NASA
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+      <span class="live" id="live"></span>
+    </div>
+  </div>
+
+  <!-- Bandeja del comparador -->
+  <div class="tray glass" id="tray" role="region" aria-label="Investigaciones seleccionadas para comparar" hidden></div>
+
+  <!-- Ficha completa de cualquier investigación (sections.js) -->
+  <div class="sheet-backdrop" id="dossier-backdrop" hidden></div>
+  <div class="sheet glass dossier" id="dossier" role="dialog" aria-modal="true" aria-labelledby="dossier-title" hidden></div>
+
+  <script type="module" src="ignis.js"></script>
+  <script type="module" src="sections.js"></script>
+</body>
+</html>

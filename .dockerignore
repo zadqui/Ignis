@@ -1,0 +1,36 @@
+# Solo entra lo que necesita el servidor público: código, configuración, frontend y la exportación pública.
+.git
+**/.venv
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+**/node_modules
+.env
+.env.*
+**/*.pem
+**/*.key
+kaggle.json
+
+# Backend: fuera pruebas, cuadernos y notas de trabajo
+backend/tests
+backend/kaggle
+backend/reviews
+backend/PSI
+backend/docs
+backend/*.md
+
+# Datos (919 MB): fuera todo salvo lo que lee la API en modo público
+backend/data/**
+!backend/data/public
+!backend/data/public/**
+!backend/data/media
+!backend/data/media/**
+!backend/data/models
+!backend/data/models/**
+# las 6 imágenes representativas de PSI que cita data/media/manifest.json
+# (solo el patrón de archivo: reincluir carpetas metería los 672 MB de data/psi)
+!backend/data/psi/files/*/*/*Representative Image*
+
+# Frontend: fuera el servidor de desarrollo
+frontend/serve.py

@@ -1,0 +1,30 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Session Name', 'Actual Day', 'Hardware Description', 'Sample Material', 'Sampled Location']
+config_id: PSI-47__DAFT
+version: 1
+source:
+  inv_id: PSI-47
+  file_name: PSI-47_Experimental table_DAFT.csv
+  resource_id: res-1ee66c49e2730aba
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: session
+grain_source: 'heuristic: header ''Session ...'''
+trial_id:
+  column: Session Name
+  normalize: strip_whitespace
+  evidence: 0/2 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Sample Material
+    interpretation_verified: false

@@ -1,0 +1,7 @@
+# EXPLORATORY tolerances for "near" a scenario range. Configurable and versioned; not a physical criterion.
+version: t-1
+status: exploratory
+approved: "developer, 2026-11-13 (initial, exploratory)"
+o2_pp: 3.0                 # +/- percentage points of O2
+pressure_rel: 0.15         # +/- 15 % relative to the nearest range bound
+flow_cm_s: 5.0             # +/- cm/s

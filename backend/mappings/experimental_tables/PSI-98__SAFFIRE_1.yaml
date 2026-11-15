@@ -1,0 +1,48 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Sample Number', 'Material', 'Sample Thickness (cm)', 'Sample Length (cm)', 'Sample Width (cm)', 'Air Flow (cm/s)', 'Percent O2', 'Ignition Power (W)', 'Ignition Time (s)', 'Burn Time (s)', 'Flow Direction', 'Camera 1', 'Camera 2']
+config_id: PSI-98__SAFFIRE_1
+version: 1
+source:
+  inv_id: PSI-98
+  file_name: PSI-98_Experimental table_SAFFIRE-1.csv
+  resource_id: res-7c7868c6fe794cff
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: Sample Number
+  normalize: strip_whitespace
+  evidence: 0/4 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Material
+    interpretation_verified: false
+  flow_velocity:
+    columns:
+    - Air Flow (cm/s)
+    unit: cm/s
+    unit_source: header
+    interpretation_verified: false
+  o2:
+    columns:
+    - Percent O2
+    unit: '%'
+    unit_source: header
+    interpretation_verified: false
+  duration:
+    columns:
+    - Burn Time (s)
+    unit: s
+    unit_source: header
+    interpretation_verified: false

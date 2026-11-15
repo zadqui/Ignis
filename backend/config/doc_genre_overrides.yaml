@@ -1,0 +1,8 @@
+# Human-reviewed genre corrections (M3). Each entry:
+# - sha256: <document sha256>
+#   genre: final_report | paper | requirements | procedure | data_description | ...
+#   content_nature: planned | observed | descriptive | mixed | unknown
+#   reviewed_by: <name>
+#   reviewed_on: YYYY-MM-DD
+#   reason: <why>
+[]

@@ -1,0 +1,59 @@
+# Curated PSI imagery for investigations without "Representative Image(s)". Identifiers and hashes only: the images
+# themselves are generated data (data/media/frames), re-fetched with `fif-app media-fetch`.
+# * frame:      one member read out of a PSI archive through HTTP Range requests (the archive is not downloaded).
+# * pdf_figure: an image embedded in a CC0 PSI document already in the corpus (no network access).
+# * insignia:   project insignia published by PSI, used only as a last resort when no frame or figure qualified.
+# Every entry was checked visually (content shows the experiment or its operation; no NASA logo or insignia; no
+# sensitive text). `checked` records that visual check; it is NOT a scientific review. Captions describe the source
+# only; they do not interpret the image. Pixels are not altered beyond format conversion, resizing and `crop`.
+version: mc-1
+checked_by: "Claude (visual check), 2026-11-14; pending confirmation by the developer"
+
+frames:
+  - {id: spice-tp95, inv_id: PSI-107, kind: frame, archive: "PSI-107_Raw Data_Downlink Frame Grabs TP 0095.zip",
+     member: "062 TP 95 vlcsnap-4249215.png",
+     member_sha256: e83c38bc9747f7bfc28461067c5e6a8cd7d462cd85599913c61e133ea64e09c2,
+     caption: "SPICE · fotograma de video descendido del ensayo TP 95", checked: "flame visible; telemetry overlay; no logos"}
+  - {id: samer-ops, inv_id: PSI-101, kind: frame, archive: "PSI-101_Engineering Documents_SAME-R Flight Ops photos.zip",
+     member: "SAME-R Flight Ops photos/iss024e008363.jpg",
+     member_sha256: 229032be2ca61dbbc720804db831d02827cdf365246a0835c7fbc0360da944f0,
+     caption: "SAME-R · operación del experimento en la ISS (foto ISS024E008363)", checked: "crew at glovebox; no logos"}
+  - {id: same-ops, inv_id: PSI-102, kind: frame, archive: "PSI-102_Engineering Documents_SAME OPS images.zip",
+     member: "ISS015E26256.jpg",
+     member_sha256: d51e8feebfd1596d4f79b7a76c866b1bd188ca6acf08f141492e3ba02017c970,
+     caption: "SAME · operación del experimento en la ISS (foto ISS015E26256)", checked: "crew with hardware; no logos visible at display size"}
+  - {id: saffire2-s4c1, inv_id: PSI-99, kind: frame, archive: "PSI-99_Raw Data_SAFFIRE-II_S4C1_Image_Data_All_JPEGs_part2.zip",
+     member: "S4C1-1479775060997.jpeg",
+     member_sha256: d34d800994c6adde8d0221ad73bafcc3f35b722d5b1e6f89d908a27996c75147,
+     caption: "SAFFIRE-II · fotograma de la cámara S4C1", checked: "sample strip during test; no logos"}
+  - {id: saffire1-s1c2, inv_id: PSI-98, kind: frame, archive: "PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part2.zip",
+     member: "S1C2-1465937366832.jpeg",
+     member_sha256: 69b0b80e0b4f595682d14c2cabe6db6d2f13ad216cc8a58f245a6e1e4bda3914,
+     caption: "SAFFIRE-I · fotograma de la cámara S1C2", checked: "sample panel during test; no logos"}
+  - {id: cfi-f177d01c, inv_id: PSI-39, kind: frame, archive: "PSI-39_Raw Data_IPSU-3 IMAGES.zip",
+     member: "F177D01C_00321.tif",
+     member_sha256: 57feba345ab1c1e37189dbeed6e825b9a96ed282ef6bb40645b231ce78d6cca2,
+     caption: "CFI · cámara IPSU-3, ensayo F177D01C (fotograma 321)", checked: "droplet and support fibre visible; no logos"}
+  - {id: flex2-d337e06b, inv_id: PSI-68, kind: frame, archive: "PSI-68_Raw Data_D337E06B.zip",
+     member: "D337E06B_00214.tif",
+     member_sha256: c642d2a7842733828276043231fe5a0c8eee5e7e4ecc32d9493aff383a0488cb,
+     caption: "FLEX-2 · ensayo D337E06B (fotograma 214)", checked: "luminous structures on fibres; no logos"}
+  - {id: bass-ops, inv_id: PSI-26, kind: frame, archive: "PSI-26_Raw Data_2013_04_09_orig.zip",
+     member: "2013_04_09_orig/20130409 10.08.49 iss035e016412.jpg",
+     member_sha256: 28295c24a7d2654d15052f4cc575f3fe7104ca633bd3e5a33b63ee9b935ea620,
+     crop: [0.0, 0.0, 1.0, 0.8],
+     caption: "BASS · operación del experimento en la ISS (foto ISS035E016412, recortada)",
+     checked: "crew at experiment; bottom strip with a round emblem on a bag removed by crop"}
+  - {id: flex-fig-p15, inv_id: PSI-69, kind: pdf_figure, doc_id: doc-50e9a5f9b5d61399, page: 15, xref: 124,
+     source_sha256: bd0dd18b7274ac4f85f67cb231446fee0684a9dd654e4c0b58e76de8193a989e,
+     caption: "FLEX · figura del documento «Cool Flames in Space, a Hot Prospect on Earth!», p. 15",
+     checked: "data figure (peak temperature vs. time); flight frames sampled were too dark to show"}
+  - {id: psi117-fig-p12, inv_id: PSI-117, kind: pdf_figure, doc_id: doc-8e4625bb2b2a8b17, page: 12, xref: 2549,
+     source_sha256: 8789932749dc3df41cefaa0fced947aa9505eba44428c337c0528b5fb58b6d04,
+     caption: "Figura del documento «Oscillatory Cool Flame» (T. Farouk), p. 12", checked: "simulation figure; no logos"}
+  - {id: acme-insignia-bre, inv_id: PSI-20, kind: insignia, file_name: "PSI-159_Representative Image(s)_ACME logo.png",
+     caption: "Insignia del programa ACME (publicada por PSI)", checked: "project insignia; no NASA logo"}
+  - {id: acme-insignia-cld, inv_id: PSI-21, kind: insignia, file_name: "PSI-159_Representative Image(s)_ACME logo.png",
+     caption: "Insignia del programa ACME (publicada por PSI)", checked: "project insignia; no NASA logo"}
+  - {id: acme-insignia-sflame, inv_id: PSI-23, kind: insignia, file_name: "PSI-159_Representative Image(s)_ACME logo.png",
+     caption: "Insignia del programa ACME (publicada por PSI)", checked: "project insignia; no NASA logo"}

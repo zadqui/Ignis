@@ -1,0 +1,43 @@
+# Small labelled set to check whether embedding similarity separates relevant from non-relevant pairs.
+# Texts are TARGET sentences of real units (selection sel-21289d16d835), referenced by unit_id.
+# Labels were assigned by the assistant (criterion: same specific phenomenon/topic, from different documents);
+# status pending_human_review. NOT a scientific judgement and NOT a relation between findings.
+version: sp-0
+status: pending_human_review
+selection_id: sel-21289d16d835
+criterion: "relevant = both sentences are about the same specific phenomenon or experimental problem"
+pairs:
+  # ---------------- relevant
+  - {a: u-efe82d1060e2b6dc, b: u-32746a957d6682f3, label: relevant, why: "microgravity flames more stable / lifted flames (PSI-20 vs PSI-159)"}
+  - {a: u-74803ab039a9efea, b: u-7a534272c537c313, label: relevant, why: "cool flames in microgravity"}
+  - {a: u-7a534272c537c313, b: u-c0a9a7813c120665, label: relevant, why: "cool flames in droplet combustion"}
+  - {a: u-74803ab039a9efea, b: u-33f498bd10607e0c, label: relevant, why: "cool flames (FLEX)"}
+  - {a: u-829dc649c0bea13b, b: u-4a5634065e172d7b, label: relevant, why: "soot formation"}
+  - {a: u-4a5634065e172d7b, b: u-a149b113a87ae7b7, label: relevant, why: "soot formation / oxidation regions"}
+  - {a: u-5e991f133521495d, b: u-829dc649c0bea13b, label: relevant, why: "soot around burning droplets"}
+  - {a: u-47b51ea4c790111d, b: u-aaa74d5cfeb8fd1e, label: relevant, why: "lost / corrupted image data"}
+  - {a: u-cae9758f67ccec21, b: u-d47715b05aae178f, label: relevant, why: "smoke particle growth"}
+  - {a: u-247ac4697a1e8171, b: u-d47715b05aae178f, label: relevant, why: "smoke particle size distribution"}
+  - {a: u-b09093b37672dcc5, b: u-7196cc2510d8d9ff, label: relevant, why: "telling an ignited flame from igniter glow"}
+  - {a: u-07e1ebfd81d504ad, b: u-b45a47409fef3750, label: relevant, why: "ignition with the igniter (PSI-25)"}
+  - {a: u-395508bfe1caa4ac, b: u-b51b827a72517e24, label: relevant, why: "droplet extinction diameters"}
+  - {a: u-cde1070129344228, b: u-395508bfe1caa4ac, label: relevant, why: "droplet flame extinction"}
+  - {a: u-5903ba54cebfab72, b: u-eb960dc30477d503, label: relevant, why: "flame spread over solids vs oxygen and flow"}
+  - {a: u-81dea1306abc53b2, b: u-395508bfe1caa4ac, label: relevant, why: "modes of droplet extinction"}
+  # ---------------- not relevant (several share combustion vocabulary)
+  - {a: u-efe82d1060e2b6dc, b: u-247ac4697a1e8171, label: not_relevant, why: "flame stability vs particle number density"}
+  - {a: u-74803ab039a9efea, b: u-47b51ea4c790111d, label: not_relevant, why: "cool flames vs image data loss"}
+  - {a: u-829dc649c0bea13b, b: u-b45a47409fef3750, label: not_relevant, why: "soot formation vs ignition energy"}
+  - {a: u-cae9758f67ccec21, b: u-5903ba54cebfab72, label: not_relevant, why: "smoke coagulation vs flame spread"}
+  - {a: u-b09093b37672dcc5, b: u-395508bfe1caa4ac, label: not_relevant, why: "ignition detection vs droplet extinction"}
+  - {a: u-aaa74d5cfeb8fd1e, b: u-a149b113a87ae7b7, label: not_relevant, why: "corrupted images vs soot regions"}
+  - {a: u-07262f1aee7b806c, b: u-7a534272c537c313, label: not_relevant, why: "instrument size table vs cool flames"}
+  - {a: u-e88b5e60dd7e4376, b: u-d47715b05aae178f, label: not_relevant, why: "thermocouple temperature vs smoke particle growth"}
+  - {a: u-258deaa092a775cb, b: u-cde1070129344228, label: not_relevant, why: "mission history vs droplet extinction"}
+  - {a: u-2dbed0510f2b6b69, b: u-07e1ebfd81d504ad, label: not_relevant, why: "soot pyrometry setup vs ignition limit"}
+  - {a: u-d7ba7e66ddfcf87a, b: u-c0a9a7813c120665, label: not_relevant, why: "cellulosic oxidation vs cool-flame vapour cloud"}
+  - {a: u-de27506f5fd64382, b: u-32746a957d6682f3, label: not_relevant, why: "instrument calibration vs lift-off height"}
+  - {a: u-f15c0e90f0fc30d3, b: u-47b51ea4c790111d, label: not_relevant, why: "soot horns vs image data loss"}
+  - {a: u-24ed95b7ad21e694, b: u-de27506f5fd64382, label: not_relevant, why: "helium heat loss vs instrument calibration"}
+  - {a: u-33f498bd10607e0c, b: u-b45a47409fef3750, label: not_relevant, why: "FLEX extinction modes vs ignition energy"}
+  - {a: u-eb960dc30477d503, b: u-4a5634065e172d7b, label: not_relevant, why: "flame spread reference vs soot formation"}

@@ -1,0 +1,46 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Flame Type', 'Day', 'Fuel', 'Test', 'Xfuel', 'mfuel (mg/s)', 'mN2 (mg/s)', 'mtot (mg/s)', 'XO2 (init)', 'XO2 (final)', 'pinit (atm)', 'pfinal (atm)', 'pmean (atm)', 'mean Zst', 'Tad (K)']
+config_id: PSI-10__Flame_Design_Normal_Flame
+version: 1
+source:
+  inv_id: PSI-10
+  file_name: PSI-10_Experimental table_Flame Design_Normal Flame.csv
+  resource_id: res-dad2b1f87d9a56a2
+review:
+  status: draft
+  priority: high
+  reviewed_by: null
+  reviewed_on: null
+  notes:
+  - 'o2: 2 columns combined as min/max envelope: [''XO2 (init)'', ''XO2 (final)'']'
+  - 'pressure: 3 columns combined as min/max envelope: [''pinit (atm)'', ''pfinal (atm)'', ''pmean (atm)'']'
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: Test
+  normalize: strip_whitespace
+  evidence: 189/207 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel
+    interpretation_verified: false
+  o2:
+    columns:
+    - XO2 (init)
+    - XO2 (final)
+    suggestion: fraction — 'X' conventionally denotes mole fraction; confirm in documentation
+    interpretation_verified: false
+  pressure:
+    columns:
+    - pinit (atm)
+    - pfinal (atm)
+    - pmean (atm)
+    unit: atm
+    unit_source: header
+    interpretation_verified: false

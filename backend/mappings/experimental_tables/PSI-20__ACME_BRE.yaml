@@ -1,0 +1,37 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Year', 'Month', 'Date', 'Burner Size (mm)', 'Fuel Bottle', 'Oxygen Conc (percent)', 'Flames Ignited', 'Notes']
+config_id: PSI-20__ACME_BRE
+version: 1
+source:
+  inv_id: PSI-20
+  file_name: PSI-20_Experimental table_ACME BRE.csv
+  resource_id: res-9c488de2154ee305
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: test_day
+grain_source: 'heuristic: header ''Flames Ignited'' (rows aggregate a test day)'
+trial_id: null
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel Bottle
+    interpretation_verified: false
+  o2:
+    columns:
+    - Oxygen Conc (percent)
+    unit: percent
+    unit_source: header
+    interpretation_verified: false
+  n_ignited:
+    columns:
+    - Flames Ignited
+    interpretation_verified: false

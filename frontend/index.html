@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flame in Freefall · prototipo</title>
+  <meta name="description" content="Qué sabemos, y qué no, sobre la combustión en gravedad reducida en las investigaciones de NASA PSI.">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3c3 6 9 9 9 16a9 9 0 0 1-18 0c0-4 2-6 4-8 0 3 1 5 3 6-1-5 0-10 2-14z' fill='%23e8590c'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="Inicio">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c3 6 9 9 9 16a9 9 0 0 1-18 0c0-4 2-6 4-8 0 3 1 5 3 6-1-5 0-10 2-14z"/></svg>
+      <span>Flame <em>in</em> Freefall</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Secciones">
+      <a href="#/" data-nav="home">Inicio</a>
+      <a href="#/investigaciones" data-nav="atlas">Investigaciones</a>
+      <a href="#/escenarios/artemis_base_camp" data-nav="scenario">Escenarios</a>
+      <a href="#/huecos/artemis_base_camp" data-nav="gaps">Huecos</a>
+      <a href="#/hallazgos" data-nav="findings">Hallazgos</a>
+      <a href="#/confianza" data-nav="trust">Confianza</a>
+      <a href="#/research" data-nav="research">IA científica</a>
+    </nav>
+    <div class="mode" id="mode" aria-live="polite"></div>
+  </header>
+
+  <section class="limits" id="limits" aria-label="Limitaciones activas"></section>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="foot">
+    <p>Prototipo de referencia UX/UI · lee solo la API de solo lectura · los textos de las fuentes se muestran con su
+      licencia y atribución. Nada de lo que muestra está confirmado por revisión científica salvo que lo indique
+      expresamente. No es un producto oficial de NASA.</p>
+  </footer>
+
+  <div class="tip" id="tip" role="tooltip" hidden></div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

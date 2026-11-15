@@ -1,0 +1,41 @@
+# PROVISIONAL parameters, configurable. Not an official specification until each source is verified.
+# Phase 2 environment: evaluated at request time by app/environments.py with the M6 classifier and tolerances.
+# It is NOT part of the M6 build (fif-scenarios reads only scenarios/*.yaml); promote it by moving the file there.
+id: orion_cabin
+version: 1
+status: provisional
+anchor: false
+name: {en: "Orion-type crew capsule", es: "Cápsula tripulada tipo Orion"}
+operating_point: {o2_pct: 21, pressure_kpa: 101.3}
+ranges:
+  o2_pct: [21, 30]
+  pressure_kpa: [70.3, 101.3]
+  flow_cm_s: [0, 20]
+gravity_regime: microgravity
+context: [prevention, detection, suppression]
+volume: small_confined
+weights: {relevance: 0.30, severity: 0.25, scarcity: 0.20, urgency: 0.15, feasibility: 0.10}
+sources:
+  pressure_kpa_min:
+    type: official_document
+    note: "Orion crew module materials certified for a worst-case cabin of 10.2 psia (70.3 kPa); summary read, full text not checked"
+    url: "https://ntrs.nasa.gov/citations/20090012334"
+    verified: false
+  pressure_kpa_max:
+    type: physical_reference
+    note: "sea-level cabin pressure 14.7 psia (101.3 kPa) during nominal phases; summary read, full text not checked"
+    url: "https://ntrs.nasa.gov/citations/20090012334"
+    verified: false
+  o2_pct_max:
+    type: official_document
+    note: "materials flammability certification at 30 % O2 and 10.2 psia (worst case, not a nominal set point)"
+    url: "https://ntrs.nasa.gov/citations/20090012334"
+    verified: false
+  o2_pct_min:
+    type: physical_reference
+    note: "air composition (~21 % O2) at 14.7 psia"
+    verified: false
+  flow_cm_s:
+    type: team_assumption
+    note: "team assumption (cabin ventilation range, same as the other scenarios)"
+    verified: false

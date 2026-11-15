@@ -1,0 +1,44 @@
+# Publication policy: what may leave the private workspace (public panel/API export, uploads to Kaggle).
+# Internal data are never modified by this policy: it only filters copies. Changing a value => bump version.
+version: pub-1
+status: draft
+decided: "developer, 2026-11-14 (compliance audit): attribution alone never unlocks restricted content"
+
+# Display classes. quote = verbatim source quote; claim = model-written reformulation of the source.
+classes:
+  public_cc0:          {quote: true,  claim: true,  attribution_required: false}
+  public_attribution:  {quote: true,  claim: true,  attribution_required: true}   # CC BY, CC BY-SA
+  public_noncommercial: {quote: true, claim: true,  attribution_required: true}   # CC BY-NC(-SA): non-commercial use only
+  public_no_derivatives: {quote: true, claim: false, attribution_required: true}  # CC BY-ND, CC BY-NC-ND: no reformulations
+  withheld:            {quote: false, claim: false, attribution_required: false}  # nothing textual leaves the workspace
+
+# permission_rule (M3) -> class. Rules not listed here are withheld.
+rules:
+  psi_cc0_confirmed: public_cc0
+  # PSI record declares CC0 but DataCite does not corroborate it (pending): publisher declaration accepted for now.
+  # Set to 'withheld' to publish only DataCite-corroborated CC0.
+  psi_cc0_psi_only: public_cc0
+  explicit_open_license: by_license   # decided by the licence string below
+  abstract_from_api: withheld         # Semantic Scholar (no third-party sharing) / OpenAlex (abstract licence unverified)
+
+licenses:
+  cc0: public_cc0
+  cc0-1.0: public_cc0
+  public-domain: public_cc0
+  cc-by: public_attribution
+  cc-by-sa: public_attribution
+  cc-by-nc: public_noncommercial
+  cc-by-nc-sa: public_noncommercial
+  cc-by-nd: public_no_derivatives
+  cc-by-nc-nd: public_no_derivatives
+
+# Origins that are always withheld, whatever their rule (licence terms forbid redistribution or are unknown).
+withheld_origins: [semantic_scholar_abstract, openalex_abstract]
+
+# Investigations whose licence is not confirmed: their raw table rows / per-trial values are not published
+# (aggregate counts are). PSI-10: PSI record has no licence and DataCite declares no rights.
+withheld_investigation_license_status: [license_unconfirmed, cc0_conflict]
+
+# Uploads to third-party compute (Kaggle). Only these classes may be uploaded; everything else stays local
+# pending review of the Kaggle terms for third-party licensed text.
+kaggle_upload_classes: [public_cc0]

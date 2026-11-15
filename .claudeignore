@@ -1,0 +1,39 @@
+# Project context and summary documents
+CONTEXTO_PROYECTO_INVESTIGACION.md
+Resumen.md
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging and build artifacts
+build/
+dist/
+site/
+*.egg
+*.egg-info/
+.eggs/
+develop-eggs/
+eggs/
+wheels/
+pip-wheel-metadata/
+.installed.cfg
+
+# Test and coverage output
+.coverage
+.coverage.*
+htmlcov/

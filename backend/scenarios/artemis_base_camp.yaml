@@ -1,0 +1,22 @@
+# PROVISIONAL parameters, configurable. Not an official specification until each source is verified.
+id: artemis_base_camp
+version: 1
+status: provisional            # provisional | verified (verified only after every source is checked)
+anchor: true
+name: {en: "Artemis lunar habitat", es: "Hábitat lunar Artemis"}
+operating_point: {o2_pct: 32, pressure_kpa: 70, gravity_g: 0.16}
+ranges:
+  o2_pct: [30, 36]
+  pressure_kpa: [56, 70]
+  flow_cm_s: [0, 20]
+  gravity_g: [0.16, 0.16]
+gravity_regime: partial_gravity
+context: [prevention, detection, suppression]
+weights: {relevance: 0.30, severity: 0.25, scarcity: 0.20, urgency: 0.15, feasibility: 0.10}
+sources:
+  o2_pct_min: {type: challenge_statement, note: "challenge statement: O2 >= 30 %", verified: false}
+  o2_pct_max: {type: team_assumption, note: "team assumption", verified: false}
+  pressure_kpa_max: {type: challenge_statement, note: "challenge statement: <= 10.2 psi (~70 kPa)", verified: false}
+  pressure_kpa_min: {type: team_assumption, note: "team assumption", verified: false}
+  flow_cm_s: {type: team_assumption, note: "team assumption (cabin ventilation range)", verified: false}
+  gravity_g: {type: physical_reference, note: "lunar surface gravity ~0.16 g", verified: false}

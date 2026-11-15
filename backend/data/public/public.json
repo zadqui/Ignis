@@ -1,0 +1,93 @@
+{
+  "source": "data\\demo\\demo.duckdb",
+  "policy_version": "pub-1",
+  "manifest": {
+    "policy_version": "pub-1",
+    "policy_sha256": "90b1d92e9cb5a1182e17701fb68a056ea59d6ea88b6d51277cb1b54afab84887",
+    "source": "data\\demo\\demo.duckdb",
+    "created_at": "2026-11-14T08:59:40",
+    "dropped_tables": [
+      "doc_pages",
+      "doc_sentences",
+      "finding_concepts",
+      "sentence_labels",
+      "sentence_selection",
+      "vocab_proposals"
+    ],
+    "dropped_columns": {
+      "units": [
+        "context_text",
+        "ctx_map_json",
+        "section_title"
+      ],
+      "finding_candidates": [
+        "parse_detail",
+        "payload_json"
+      ]
+    },
+    "withheld_investigations": [
+      "PSI-10"
+    ],
+    "documents_by_class": {
+      "public_cc0": 120,
+      "withheld": 245,
+      "public_no_derivatives": 1,
+      "public_attribution": 2
+    },
+    "tables": {
+      "access_options": 300,
+      "corpus_coverage": 24,
+      "declared_gaps": 9,
+      "document_resources": 315,
+      "documents": 368,
+      "downloads": 207,
+      "evidence": 289,
+      "finding_candidates": 126,
+      "finding_checks": 1738,
+      "finding_pairs": 67,
+      "findings": 126,
+      "findings_coverage": 24,
+      "findings_for_m5": 34,
+      "findings_singularity": 22,
+      "investigation_rights": 24,
+      "investigations": 24,
+      "link_candidates": 86,
+      "m5_config": 1,
+      "m5_findings": 75,
+      "machine_findings": 126,
+      "publications": 352,
+      "relation_reviews": 0,
+      "relations": 63,
+      "resources": 60900,
+      "runs": 2,
+      "scenario_coverage": 57,
+      "scenario_dimension_summary": 12,
+      "scenario_findings_evidence": 6,
+      "scenario_gaps": 197,
+      "scenario_tolerances": 1,
+      "scenario_trial_coverage": 20040,
+      "scenarios": 3,
+      "scientific_reviews": 0,
+      "table_profiles": 202,
+      "table_rows": 2563,
+      "tables": 22,
+      "trial_resource_links": 3872,
+      "trials": 1670,
+      "units": 12389,
+      "versions": 24,
+      "versions_history": 26,
+      "work_investigations": 352,
+      "works": 299
+    }
+  },
+  "leak_scan": {
+    "ok": true,
+    "leaks": [],
+    "n_needles": 834
+  },
+  "verification": {
+    "ok": true,
+    "failures": [],
+    "n_checks": 16
+  }
+}

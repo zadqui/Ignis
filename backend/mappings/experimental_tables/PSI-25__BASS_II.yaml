@@ -1,0 +1,39 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['PI', 'Test #', 'Date', 'GMT', 'Sample #', 'Fuel Sample Material', 'Flow restrictor', 'Fan display', 'Air display', 'Radiometer gain (1000 250 50 10)', 'Total Frames Shot', 'Calibrated initial O2 % by vol', 'Calibrated final O2 % by vol', 'Initial CO2 % by vol', 'Final CO2 % by vol', 'Initial CO (ppm)', 'Final CO (ppm)']
+config_id: PSI-25__BASS_II
+version: 1
+source:
+  inv_id: PSI-25
+  file_name: PSI-25_Experimental table_BASS-II.csv
+  resource_id: res-eca0d187a9afd9de
+review:
+  status: draft
+  priority: high
+  reviewed_by: null
+  reviewed_on: null
+  notes:
+  - 'o2: 2 columns combined as min/max envelope: [''Calibrated initial O2 % by vol'', ''Calibrated final O2 % by
+    vol'']'
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: 'Test #'
+  normalize: strip_whitespace
+  evidence: '0/129 normalised ids equal an inventory path segment; other candidates: [''Sample #'']'
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Fuel Sample Material
+    interpretation_verified: false
+  o2:
+    columns:
+    - Calibrated initial O2 % by vol
+    - Calibrated final O2 % by vol
+    unit: '%'
+    unit_source: header
+    interpretation_verified: false

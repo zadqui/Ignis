@@ -1,0 +1,21 @@
+# External sources used by M3 (corpus). Add a source = add an adapter in
+# flame_in_freefall/corpus/sources.py + an entry here. Limits are conservative.
+openalex:
+  enabled: true
+  base_url: https://api.openalex.org
+  batch_size: 50          # DOIs per filter query
+  min_interval_s: 1.0
+semantic_scholar:
+  enabled: true
+  base_url: https://api.semanticscholar.org/graph/v1
+  batch_size: 100         # ids per batch call (API max 500); no key (shared rate limit)
+  min_interval_s: 3.0
+ntrs:
+  enabled: true
+  base_url: https://ntrs.nasa.gov/api
+  # NASA STI OpenAPI terms: 500 requests / 15 min (= 1 per 1.8 s). Retry-After is honoured (corpus/http.py).
+  min_interval_s: 2.0
+datacite:
+  enabled: true
+  base_url: https://api.datacite.org
+  min_interval_s: 0.5

@@ -1,0 +1,3212 @@
+{
+  "dataset": "Real public NASA PSI export, retrieved 2026-11-14",
+  "note": "Response excerpts truncate lists to two items. Scenario conditions are user inputs.",
+  "examples": [
+    {
+      "path": "/search/semantic",
+      "request": {
+        "query": "Estudios sobre propagación de fuego en PMMA",
+        "limit": 3
+      },
+      "elapsed_seconds": 6.063,
+      "response_excerpt": {
+        "data": {
+          "results": [
+            {
+              "inv_id": "PSI-26",
+              "title": "Burning and Suppression of Solids",
+              "acronym": "BASS",
+              "description": "The two main objectives for BASS are to:\n    1.) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test#1 method, ground-based microgravity tests, and actual material flammability in microgravity. The relation between these can be investigated by observing flames burning for the longer times available in flight. Practical, realistic (thicker) fuels in typical geometries will be examined, including wake flames which have characteristics of a fire burning behind another object (for example, a fire burning in tight area which may not be easily accessible).\n    2.) Assess the effectiveness of an inert, gaseous extinguishing agent (similar to that used on ISS) in putting out flames over different materials, geometries, preheating, and flow.",
+              "categories": [
+                {
+                  "category": "Flame Propagation",
+                  "citation_ids": [
+                    "PSI-26:metadata",
+                    "f-7edc701a70c4c921"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-26:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Fire Suppression",
+                  "citation_ids": [
+                    "PSI-26:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Smoke and Aerosols",
+                  "citation_ids": [
+                    "resource:res-08072d43e98f8b24"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-26:metadata",
+                    "f-7edc701a70c4c921"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.854022,
+                "semantic_similarity": 0.854022,
+                "text_score": 0.142857,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-26:metadata",
+                  "f-7edc701a70c4c921",
+                  "resource:res-08072d43e98f8b24"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-7edc701a70c4c921",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "kind": "result",
+                  "claim": "Testing at constant O2 mole fraction permits studying flame spread and extinction at low and high flow speed.",
+                  "attribution": "this_work",
+                  "variable": "O2 mole fraction",
+                  "effect_on": "flame spread and extinction",
+                  "direction": "none",
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-7edc701a70c4c921",
+                    "inv_ids": [
+                      "PSI-26"
+                    ],
+                    "doc_id": "doc-d87675b105c4e44e",
+                    "finding_id": "f-7edc701a70c4c921",
+                    "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/58h4-dy80",
+                    "url": "https://doi.org/10.60555/58h4-dy80",
+                    "page": 3,
+                    "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-7edc701a70c4c921",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": "doc-d87675b105c4e44e",
+                  "finding_id": "f-7edc701a70c4c921",
+                  "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": 3,
+                  "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-26:metadata",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Burning and Suppression of Solids",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-08072d43e98f8b24",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-26_Experimental table_BASS.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-99",
+              "title": "Spacecraft Fire Experiment-II",
+              "acronym": "SAFFIRE-II",
+              "description": "The objectives of SAFFIRE-II are to determine how rapidly a large scale fire grows in low-gravity and to investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test.",
+              "categories": [
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Spacecraft Fire Safety",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.852116,
+                "semantic_similarity": 0.852116,
+                "text_score": 0.142857,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-99:metadata",
+                  "f-f9ccda459a277cf5",
+                  "resource:res-15890c5ed74a2322"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-f9ccda459a277cf5",
+                  "inv_ids": [
+                    "PSI-100",
+                    "PSI-98",
+                    "PSI-99"
+                  ],
+                  "kind": "future_work",
+                  "claim": "A thorough evaluation of these phenomena would require many more samples and range of materials.",
+                  "attribution": null,
+                  "variable": null,
+                  "effect_on": null,
+                  "direction": null,
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-f9ccda459a277cf5",
+                    "inv_ids": [
+                      "PSI-100",
+                      "PSI-98",
+                      "PSI-99"
+                    ],
+                    "doc_id": "doc-6cff0b55b8f1416f",
+                    "finding_id": "f-f9ccda459a277cf5",
+                    "title": "SAFFIRE Objectives, Development and Status.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/0t15-1z43",
+                    "url": "https://doi.org/10.60555/0t15-1z43",
+                    "page": 5,
+                    "quote": "A thorough evaluation of \nthese phenomena would require many more samples \nand range of materials.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-f9ccda459a277cf5",
+                  "inv_ids": [
+                    "PSI-100",
+                    "PSI-98",
+                    "PSI-99"
+                  ],
+                  "doc_id": "doc-6cff0b55b8f1416f",
+                  "finding_id": "f-f9ccda459a277cf5",
+                  "title": "SAFFIRE Objectives, Development and Status.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/0t15-1z43",
+                  "url": "https://doi.org/10.60555/0t15-1z43",
+                  "page": 5,
+                  "quote": "A thorough evaluation of \nthese phenomena would require many more samples \nand range of materials.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-99:metadata",
+                  "inv_ids": [
+                    "PSI-99"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Spacecraft Fire Experiment-II",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/2chp-m469",
+                  "url": "https://doi.org/10.60555/2chp-m469",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-15890c5ed74a2322",
+                  "inv_ids": [
+                    "PSI-99"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-99_Experimental table_SAFFIRE-2.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/2chp-m469",
+                  "url": "https://doi.org/10.60555/2chp-m469",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-62",
+              "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+              "acronym": null,
+              "description": "The objective of this research was to develop and validate new flamelet generated manifold (FGM) modeling techniques for concurrent flame spread in microgravity. Concurrent flame spread presented one of the greatest modeling challenges in combustion science due to the intricate coupling between heat transfer, mass transport, and chemical kinetics near the solid-vapor interface. Traditional modeling strategies often relied on hybridized turbulence and chemistry models that were not fully consistent and failed to capture important intermediate reaction pathways.\nTo overcome these shortcomings, this PSI grant advanced the use of an unsteady flamelet generated manifold (UFGM) framework that reduced the complexity of reacting systems by mapping them into lower-dimensional manifolds. The research aimed to leverage this methodology to simulate solid fuel combustion processes with high fidelity, using the NASA Burning and Suppression of Solids (BASS and BASS-II) experiments as benchmarks. Ultimately, the long-term goal was to enable accurate prediction of flammability limits for spacecraft materials and to provide a tool that could also serve as a subgrid-scale model in large-eddy simulations of fires, supporting spacecraft safety and hazard mitigation.",
+              "categories": [
+                {
+                  "category": "Flame Propagation",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Modeling",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Smoke and Aerosols",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Spacecraft Fire Safety",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.844812,
+                "semantic_similarity": 0.844812,
+                "text_score": 0.142857,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-62:metadata"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [],
+              "references": [
+                {
+                  "citation_id": "PSI-62:metadata",
+                  "inv_ids": [
+                    "PSI-62"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/e9xp-ex83",
+                  "url": "https://doi.org/10.60555/e9xp-ex83",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            }
+          ],
+          "criteria": {
+            "query": "Estudios sobre propagación de fuego en PMMA",
+            "intent": "search",
+            "investigation_ids": [],
+            "concepts": [
+              "pmma",
+              "flame_spread"
+            ],
+            "materials": [
+              "pmma"
+            ],
+            "fuels": [
+              "pmma"
+            ],
+            "gravity": [],
+            "variables": [
+              "flame_spread"
+            ],
+            "instrumentation": [],
+            "security_applications": [],
+            "environment": null,
+            "quantities": {
+              "o2_pct": null,
+              "pressure_kpa": null,
+              "flow_cm_s": null,
+              "gravity_g": null
+            },
+            "parser": "research-concepts-1"
+          },
+          "total": 4,
+          "offset": 0,
+          "limit": 3,
+          "mode": "semantic:intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+          "warnings": [
+            "La relevancia temática no establece equivalencia de condiciones experimentales."
+          ]
+        },
+        "meta": {
+          "versions": {
+            "m5_config": "rc-1",
+            "vocab": "v-0",
+            "rules": "rr-1",
+            "embedder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "tolerances": "t-1",
+            "research_api": "research-api-4",
+            "research_concepts": "research-concepts-1",
+            "research_encoder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "research_source": "475cde27d20b20c727642f2f90eab59d500a64319f07fc14020553c00bf8cfc9"
+          },
+          "limitations": [
+            {
+              "key": "draft_mappings",
+              "n": 1670
+            },
+            {
+              "key": "provisional_scenarios",
+              "n": 3
+            },
+            {
+              "key": "exploratory_tolerances",
+              "version": "t-1"
+            },
+            {
+              "key": "gravity_not_recorded",
+              "n": 1670
+            },
+            {
+              "key": "text_not_extracted",
+              "units": 12389,
+              "extracted": 30
+            },
+            {
+              "key": "findings_unreviewed",
+              "machine_verified": 38,
+              "confirmed": 0
+            },
+            {
+              "key": "similarity_not_discriminative",
+              "tau": 0.8
+            },
+            {
+              "key": "relations_provisional"
+            },
+            {
+              "key": "singularity_uncalibrated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/search/hybrid",
+      "request": {
+        "query": "Investigaciones sobre propagación de fuego en materiales acrílicos",
+        "limit": 3
+      },
+      "elapsed_seconds": 0.106,
+      "response_excerpt": {
+        "data": {
+          "results": [
+            {
+              "inv_id": "PSI-99",
+              "title": "Spacecraft Fire Experiment-II",
+              "acronym": "SAFFIRE-II",
+              "description": "The objectives of SAFFIRE-II are to determine how rapidly a large scale fire grows in low-gravity and to investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test.",
+              "categories": [
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Spacecraft Fire Safety",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.543389,
+                "semantic_similarity": 0.835983,
+                "text_score": 0,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-99:metadata",
+                  "f-f9ccda459a277cf5",
+                  "resource:res-15890c5ed74a2322"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-f9ccda459a277cf5",
+                  "inv_ids": [
+                    "PSI-100",
+                    "PSI-98",
+                    "PSI-99"
+                  ],
+                  "kind": "future_work",
+                  "claim": "A thorough evaluation of these phenomena would require many more samples and range of materials.",
+                  "attribution": null,
+                  "variable": null,
+                  "effect_on": null,
+                  "direction": null,
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-f9ccda459a277cf5",
+                    "inv_ids": [
+                      "PSI-100",
+                      "PSI-98",
+                      "PSI-99"
+                    ],
+                    "doc_id": "doc-6cff0b55b8f1416f",
+                    "finding_id": "f-f9ccda459a277cf5",
+                    "title": "SAFFIRE Objectives, Development and Status.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/0t15-1z43",
+                    "url": "https://doi.org/10.60555/0t15-1z43",
+                    "page": 5,
+                    "quote": "A thorough evaluation of \nthese phenomena would require many more samples \nand range of materials.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-f9ccda459a277cf5",
+                  "inv_ids": [
+                    "PSI-100",
+                    "PSI-98",
+                    "PSI-99"
+                  ],
+                  "doc_id": "doc-6cff0b55b8f1416f",
+                  "finding_id": "f-f9ccda459a277cf5",
+                  "title": "SAFFIRE Objectives, Development and Status.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/0t15-1z43",
+                  "url": "https://doi.org/10.60555/0t15-1z43",
+                  "page": 5,
+                  "quote": "A thorough evaluation of \nthese phenomena would require many more samples \nand range of materials.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-99:metadata",
+                  "inv_ids": [
+                    "PSI-99"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Spacecraft Fire Experiment-II",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/2chp-m469",
+                  "url": "https://doi.org/10.60555/2chp-m469",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-15890c5ed74a2322",
+                  "inv_ids": [
+                    "PSI-99"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-99_Experimental table_SAFFIRE-2.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/2chp-m469",
+                  "url": "https://doi.org/10.60555/2chp-m469",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-25",
+              "title": "Burning and Suppression of Solids - II",
+              "acronym": "BASS-II",
+              "description": "BASS-II results contribute to the combustion computational models used in the design of fire detection and suppression systems in microgravity and on Earth.\nObjectives Include:\n  1) Study the ignition, flame growth, flame spread, and extinction limits for solid fuels burning in low-velocity forced flows in microgravity.\n  2) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test #1 method, ground-based microgravity tests, and actual material flammability in microgravity.\n  3) Provide SoFIE PIs with preliminary data to refine Science Requirements.\n  4)  Practical, realistic (thicker) fuels in typical geometries will be examined, including slabs, cylinders, and spherical sections.\n\nThe primary variables include:\n     • Forced flow velocity (speed and direction)\n     • Ambient oxygen concentration (via working volume nitrogen vitiation)\n     • Sample geometry (rods, spherical section, slabs, films, and fabric sheets",
+              "categories": [
+                {
+                  "category": "Flame Propagation",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Fire Detection",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Spacecraft Fire Safety",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.533448,
+                "semantic_similarity": 0.820689,
+                "text_score": 0,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-25:metadata",
+                  "f-11cb11cd2c24548e",
+                  "f-4f0bf825ddbbe141",
+                  "resource:res-eca0d187a9afd9de"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-11cb11cd2c24548e",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "kind": "result",
+                  "claim": "It never spread along the outer surface of the rod.",
+                  "attribution": null,
+                  "variable": null,
+                  "effect_on": null,
+                  "direction": null,
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-11cb11cd2c24548e",
+                    "inv_ids": [
+                      "PSI-25"
+                    ],
+                    "doc_id": "doc-5ffa911fd9b6356f",
+                    "finding_id": "f-11cb11cd2c24548e",
+                    "title": "BASS-II Summary Report.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/4qc4-de67",
+                    "url": "https://doi.org/10.60555/4qc4-de67",
+                    "page": 59,
+                    "quote": "It never spread along the outer surface of the rod.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                },
+                {
+                  "finding_id": "f-4f0bf825ddbbe141",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "kind": "limitation",
+                  "claim": "The agreement seems reasonable.",
+                  "attribution": "this_work",
+                  "variable": null,
+                  "effect_on": null,
+                  "direction": null,
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-4f0bf825ddbbe141",
+                    "inv_ids": [
+                      "PSI-25"
+                    ],
+                    "doc_id": "doc-5ffa911fd9b6356f",
+                    "finding_id": "f-4f0bf825ddbbe141",
+                    "title": "BASS-II Summary Report.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/4qc4-de67",
+                    "url": "https://doi.org/10.60555/4qc4-de67",
+                    "page": 36,
+                    "quote": "the agreement \nseems reasonable.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-11cb11cd2c24548e",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": "doc-5ffa911fd9b6356f",
+                  "finding_id": "f-11cb11cd2c24548e",
+                  "title": "BASS-II Summary Report.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": 59,
+                  "quote": "It never spread along the outer surface of the rod.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "f-4f0bf825ddbbe141",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": "doc-5ffa911fd9b6356f",
+                  "finding_id": "f-4f0bf825ddbbe141",
+                  "title": "BASS-II Summary Report.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": 36,
+                  "quote": "the agreement \nseems reasonable.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-25:metadata",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Burning and Suppression of Solids - II",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-eca0d187a9afd9de",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-25_Experimental table_BASS-II.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-26",
+              "title": "Burning and Suppression of Solids",
+              "acronym": "BASS",
+              "description": "The two main objectives for BASS are to:\n    1.) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test#1 method, ground-based microgravity tests, and actual material flammability in microgravity. The relation between these can be investigated by observing flames burning for the longer times available in flight. Practical, realistic (thicker) fuels in typical geometries will be examined, including wake flames which have characteristics of a fire burning behind another object (for example, a fire burning in tight area which may not be easily accessible).\n    2.) Assess the effectiveness of an inert, gaseous extinguishing agent (similar to that used on ISS) in putting out flames over different materials, geometries, preheating, and flow.",
+              "categories": [
+                {
+                  "category": "Flame Propagation",
+                  "citation_ids": [
+                    "PSI-26:metadata",
+                    "f-7edc701a70c4c921"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-26:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Fire Suppression",
+                  "citation_ids": [
+                    "PSI-26:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Smoke and Aerosols",
+                  "citation_ids": [
+                    "resource:res-08072d43e98f8b24"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-26:metadata",
+                    "f-7edc701a70c4c921"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.533448,
+                "semantic_similarity": 0.82069,
+                "text_score": 0,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-26:metadata",
+                  "f-7edc701a70c4c921",
+                  "resource:res-08072d43e98f8b24"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-7edc701a70c4c921",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "kind": "result",
+                  "claim": "Testing at constant O2 mole fraction permits studying flame spread and extinction at low and high flow speed.",
+                  "attribution": "this_work",
+                  "variable": "O2 mole fraction",
+                  "effect_on": "flame spread and extinction",
+                  "direction": "none",
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-7edc701a70c4c921",
+                    "inv_ids": [
+                      "PSI-26"
+                    ],
+                    "doc_id": "doc-d87675b105c4e44e",
+                    "finding_id": "f-7edc701a70c4c921",
+                    "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/58h4-dy80",
+                    "url": "https://doi.org/10.60555/58h4-dy80",
+                    "page": 3,
+                    "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-7edc701a70c4c921",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": "doc-d87675b105c4e44e",
+                  "finding_id": "f-7edc701a70c4c921",
+                  "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": 3,
+                  "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-26:metadata",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Burning and Suppression of Solids",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-08072d43e98f8b24",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-26_Experimental table_BASS.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            }
+          ],
+          "criteria": {
+            "query": "Investigaciones sobre propagación de fuego en materiales acrílicos",
+            "intent": "search",
+            "investigation_ids": [],
+            "concepts": [
+              "pmma",
+              "flame_spread"
+            ],
+            "materials": [
+              "pmma"
+            ],
+            "fuels": [
+              "pmma"
+            ],
+            "gravity": [],
+            "variables": [
+              "flame_spread"
+            ],
+            "instrumentation": [],
+            "security_applications": [],
+            "environment": null,
+            "quantities": {
+              "o2_pct": null,
+              "pressure_kpa": null,
+              "flow_cm_s": null,
+              "gravity_g": null
+            },
+            "parser": "research-concepts-1"
+          },
+          "total": 4,
+          "offset": 0,
+          "limit": 3,
+          "mode": "hybrid:intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+          "warnings": [
+            "La relevancia temática no establece equivalencia de condiciones experimentales."
+          ]
+        },
+        "meta": {
+          "versions": {
+            "m5_config": "rc-1",
+            "vocab": "v-0",
+            "rules": "rr-1",
+            "embedder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "tolerances": "t-1",
+            "research_api": "research-api-4",
+            "research_concepts": "research-concepts-1",
+            "research_encoder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "research_source": "475cde27d20b20c727642f2f90eab59d500a64319f07fc14020553c00bf8cfc9"
+          },
+          "limitations": [
+            {
+              "key": "draft_mappings",
+              "n": 1670
+            },
+            {
+              "key": "provisional_scenarios",
+              "n": 3
+            },
+            {
+              "key": "exploratory_tolerances",
+              "version": "t-1"
+            },
+            {
+              "key": "gravity_not_recorded",
+              "n": 1670
+            },
+            {
+              "key": "text_not_extracted",
+              "units": 12389,
+              "extracted": 30
+            },
+            {
+              "key": "findings_unreviewed",
+              "machine_verified": 38,
+              "confirmed": 0
+            },
+            {
+              "key": "similarity_not_discriminative",
+              "tau": 0.8
+            },
+            {
+              "key": "relations_provisional"
+            },
+            {
+              "key": "singularity_uncalibrated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/assistant/query",
+      "request": {
+        "question": "Resume la investigación BASS-II"
+      },
+      "elapsed_seconds": 0.07,
+      "response_excerpt": {
+        "data": {
+          "interpretation": "Se recuperaron 2 hallazgos con cita localizada. Las afirmaciones se presentan por investigación y conservan su estado de revisión.",
+          "statements": [
+            {
+              "text": "It never spread along the outer surface of the rod.",
+              "kind": "source_reported_claim",
+              "interpretation": "La fuente comunica este resultado. Su alcance depende de las condiciones documentadas.",
+              "claim_type": "result",
+              "attribution": null,
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "finding_ids": [
+                "f-11cb11cd2c24548e"
+              ],
+              "citation_ids": [
+                "f-11cb11cd2c24548e"
+              ],
+              "scientific_review_confirmed": false
+            },
+            {
+              "text": "The agreement seems reasonable.",
+              "kind": "source_reported_claim",
+              "interpretation": "La fuente reconoce esta limitación, que restringe el alcance de sus conclusiones.",
+              "claim_type": "limitation",
+              "attribution": "this_work",
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "finding_ids": [
+                "f-4f0bf825ddbbe141"
+              ],
+              "citation_ids": [
+                "f-4f0bf825ddbbe141"
+              ],
+              "scientific_review_confirmed": false
+            }
+          ],
+          "evidence": [
+            {
+              "finding_id": "f-11cb11cd2c24548e",
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "kind": "result",
+              "claim": "It never spread along the outer surface of the rod.",
+              "attribution": null,
+              "variable": null,
+              "effect_on": null,
+              "direction": null,
+              "conditions": {},
+              "values": [],
+              "citation": {
+                "citation_id": "f-11cb11cd2c24548e",
+                "inv_ids": [
+                  "PSI-25"
+                ],
+                "doc_id": "doc-5ffa911fd9b6356f",
+                "finding_id": "f-11cb11cd2c24548e",
+                "title": "BASS-II Summary Report.pdf",
+                "authors": null,
+                "year": null,
+                "doi": "10.60555/4qc4-de67",
+                "url": "https://doi.org/10.60555/4qc4-de67",
+                "page": 59,
+                "quote": "It never spread along the outer surface of the rod.",
+                "license": "CC0 (PSI record + DataCite)",
+                "status": {
+                  "source_located": true,
+                  "quote_verified": true,
+                  "claim_checked": false,
+                  "scientific_review_confirmed": false,
+                  "insufficient": true
+                }
+              }
+            },
+            {
+              "finding_id": "f-4f0bf825ddbbe141",
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "kind": "limitation",
+              "claim": "The agreement seems reasonable.",
+              "attribution": "this_work",
+              "variable": null,
+              "effect_on": null,
+              "direction": null,
+              "conditions": {},
+              "values": [],
+              "citation": {
+                "citation_id": "f-4f0bf825ddbbe141",
+                "inv_ids": [
+                  "PSI-25"
+                ],
+                "doc_id": "doc-5ffa911fd9b6356f",
+                "finding_id": "f-4f0bf825ddbbe141",
+                "title": "BASS-II Summary Report.pdf",
+                "authors": null,
+                "year": null,
+                "doi": "10.60555/4qc4-de67",
+                "url": "https://doi.org/10.60555/4qc4-de67",
+                "page": 36,
+                "quote": "the agreement \nseems reasonable.",
+                "license": "CC0 (PSI record + DataCite)",
+                "status": {
+                  "source_located": true,
+                  "quote_verified": true,
+                  "claim_checked": false,
+                  "scientific_review_confirmed": false,
+                  "insufficient": true
+                }
+              }
+            }
+          ],
+          "finding_ids": [
+            "f-11cb11cd2c24548e",
+            "f-4f0bf825ddbbe141"
+          ],
+          "references": [
+            {
+              "citation_id": "f-11cb11cd2c24548e",
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "doc_id": "doc-5ffa911fd9b6356f",
+              "finding_id": "f-11cb11cd2c24548e",
+              "title": "BASS-II Summary Report.pdf",
+              "authors": null,
+              "year": null,
+              "doi": "10.60555/4qc4-de67",
+              "url": "https://doi.org/10.60555/4qc4-de67",
+              "page": 59,
+              "quote": "It never spread along the outer surface of the rod.",
+              "license": "CC0 (PSI record + DataCite)",
+              "status": {
+                "source_located": true,
+                "quote_verified": true,
+                "claim_checked": false,
+                "scientific_review_confirmed": false,
+                "insufficient": true
+              }
+            },
+            {
+              "citation_id": "f-4f0bf825ddbbe141",
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "doc_id": "doc-5ffa911fd9b6356f",
+              "finding_id": "f-4f0bf825ddbbe141",
+              "title": "BASS-II Summary Report.pdf",
+              "authors": null,
+              "year": null,
+              "doi": "10.60555/4qc4-de67",
+              "url": "https://doi.org/10.60555/4qc4-de67",
+              "page": 36,
+              "quote": "the agreement \nseems reasonable.",
+              "license": "CC0 (PSI record + DataCite)",
+              "status": {
+                "source_located": true,
+                "quote_verified": true,
+                "claim_checked": false,
+                "scientific_review_confirmed": false,
+                "insufficient": true
+              }
+            }
+          ],
+          "limitations": [
+            "La extracción y la verificación literal no validan la interpretación científica.",
+            "Los resultados se limitan a las fuentes procesadas y autorizadas de esta exportación."
+          ],
+          "warnings": [
+            "La interpretación conserva las afirmaciones de las fuentes. La compatibilidad requiere validar las condiciones."
+          ],
+          "evidence_status": {
+            "source_located": true,
+            "quote_verified": true,
+            "claim_checked": false,
+            "scientific_review_confirmed": false,
+            "insufficient": false
+          },
+          "context": {
+            "investigation_ids": [
+              "PSI-25"
+            ],
+            "criteria": {
+              "query": "Resume la investigación BASS-II",
+              "intent": "summarize",
+              "investigation_ids": [
+                "PSI-25"
+              ],
+              "concepts": [],
+              "materials": [],
+              "fuels": [],
+              "gravity": [],
+              "variables": [],
+              "instrumentation": [],
+              "security_applications": [],
+              "environment": null,
+              "quantities": {
+                "o2_pct": null,
+                "pressure_kpa": null,
+                "flow_cm_s": null,
+                "gravity_g": null
+              },
+              "parser": "research-concepts-1"
+            },
+            "finding_ids": [],
+            "trial_keys": [],
+            "model": null
+          },
+          "generation_mode": "extractive_grounded"
+        },
+        "meta": {
+          "versions": {
+            "m5_config": "rc-1",
+            "vocab": "v-0",
+            "rules": "rr-1",
+            "embedder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "tolerances": "t-1",
+            "research_api": "research-api-4",
+            "research_concepts": "research-concepts-1",
+            "research_encoder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "research_source": "475cde27d20b20c727642f2f90eab59d500a64319f07fc14020553c00bf8cfc9"
+          },
+          "limitations": [
+            {
+              "key": "draft_mappings",
+              "n": 1670
+            },
+            {
+              "key": "provisional_scenarios",
+              "n": 3
+            },
+            {
+              "key": "exploratory_tolerances",
+              "version": "t-1"
+            },
+            {
+              "key": "gravity_not_recorded",
+              "n": 1670
+            },
+            {
+              "key": "text_not_extracted",
+              "units": 12389,
+              "extracted": 30
+            },
+            {
+              "key": "findings_unreviewed",
+              "machine_verified": 38,
+              "confirmed": 0
+            },
+            {
+              "key": "similarity_not_discriminative",
+              "tau": 0.8
+            },
+            {
+              "key": "relations_provisional"
+            },
+            {
+              "key": "singularity_uncalibrated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/compare/investigations",
+      "request": {
+        "investigation_ids": [
+          "BASS-II",
+          "FLEX"
+        ]
+      },
+      "elapsed_seconds": 0.116,
+      "response_excerpt": {
+        "data": {
+          "entity_type": "investigation",
+          "ids": [
+            "PSI-25",
+            "PSI-69"
+          ],
+          "variables": [
+            {
+              "variable": "objectives",
+              "by_investigation": {
+                "PSI-25": [
+                  {
+                    "text": "BASS-II results contribute to the combustion computational models used in the design of fire detection and suppression systems in microgravity and on Earth.\nObjectives Include:\n  1) Study the ignition, flame growth, flame spread, and extinction limits for solid fuels burning in low-velocity forced flows in microgravity.\n  2) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test #1 method, ground-based microgravity tests, and actual material flammability in microgravity.\n  3) Provide SoFIE PIs with preliminary data to refine Science Requirements.\n  4)  Practical, realistic (thicker) fuels in typical geometries will be examined, including slabs, cylinders, and spherical sections.\n\nThe primary variables include:\n     • Forced flow velocity (speed and direction)\n     • Ambient oxygen concentration (via working volume nitrogen vitiation)\n     • Sample geometry (rods, spherical section, slabs, films, and fabric sheets",
+                    "citation_ids": [
+                      "PSI-25:metadata"
+                    ],
+                    "kind": "source_metadata"
+                  }
+                ],
+                "PSI-69": [
+                  {
+                    "text": "The FLEX (Flame Extinguishment Experiment) investigation aims to map the flammability limits of liquid fuels in microgravity environments, measure the effectiveness of various gaseous fire suppressants such as CO2, He, and SF6, and develop reliable predictive models for combustion limits under reduced gravity conditions. The mission seeks to validate and improve simplified models by incorporating detailed chemical reactions, heat transfer, and material movement, using both space-based data and extensive ground-based tests. Key flight experiment goals include obtaining high-resolution measurements of droplet burning rates, flame extinction behavior, heat radiation, soot levels, and temperature profiles, while systematically analyzing the effects of different ambient conditions and suppressant concentrations. These investigations are essential for advancing the fundamental understanding of combustion processes in microgravity and enhancing fire safety protocols for future space missions.",
+                    "citation_ids": [
+                      "PSI-69:metadata"
+                    ],
+                    "kind": "source_metadata"
+                  }
+                ]
+              }
+            },
+            {
+              "variable": "methodology",
+              "by_investigation": {
+                "PSI-25": [
+                  {
+                    "text": "To summarize, BASS-II's approach, microgravity combustion tests were performed aboard the International Space Station. Active crew support for real-time “lab partner” operations. The wind tunnel was installed in the Microgravity Science Glovebox which supplied power, imaging, and a level of containment. Fuel samples were mounted inside a small wind tunnel which could impose airflow speeds up to 40 cm/s. Main variables are airflow speed and oxygen concentration (oxygen varied below 21% by adding nitrogen). Flame appearance, flame growth, and spread rates were determined in both the opposed and concurrent flow.",
+                    "citation_ids": [
+                      "PSI-25:metadata"
+                    ],
+                    "kind": "source_metadata"
+                  }
+                ],
+                "PSI-69": [
+                  {
+                    "text": "The FLEX experiments involve igniting and observing the burning behavior of relatively large droplets. A primary objective of the experiments is to determine the Limiting Oxygen Index (LOI) as a function of ambient pressure and determine how the presence of a suppressant influences the LOI .\nThe basic outline of the procedure to construct this diagram is as follows:\n  1. Select the test pressure (0.5 − 1.5 atm) for the LOI tests.\n  2. Select a smaller droplet size (≈ 3 mm)\n  3. Select an ambient oxygen mole fraction that, based on ground-based testing, will support droplets burning to completion (as opposed to extinguishing at a finite droplet size).\n  4. Perform a droplet combustion test.\n  5. Increase the droplet size or repeat the test (if finite extinction diameter at flame extinction observed).\n  6. Continue steps 4 and 5 until flame exists for only a short time after ignition (radiative extinction).\n  7. Continue steps 4 thru 6 at a decreased ambient oxygen mole fraction.\n  8. Continue step 7 to an ambient oxygen mole fraction where the droplet does not ignite.\n\nThere were ambient conditions where the extinction droplet sizes at all ambient oxygen mole fractions were too small to either be observed or measured with the available diagnostics. In this case, the determination of the LOI is similar, but more iterative. Instead of observing flame extinction, however, the procedure  involved an iterative sequence of tests (burn to completion followed by a no ignition test) with progressively smaller increments in ambient oxygen mole fraction to determine the LOI . For the slow flow tests (in the flight experiment), the configuration of the flight hardware did not allow for adequate diagnostics over the entire test for a droplet in a uniform, steady convective flow.  In these tests, the procedure will be to duplicate tests above which yield finite-sized extinction droplet diameters. Near the end of the tests, prior to flame extinction, the droplet will be subjected to a small, sub-buoyant, convective flow (imparted by translating the droplet at a slow, uniform speed).\n\nThe goal of the experiment is then to see how the presence of this flow influences the extinction process. Note, a large number of the tests involve free droplets (as opposed to fiber-supported droplets) and a number of these tests will have droplets with a slow drift velocity. Data gathered from these tests to examine the influences of a small, sub-buoyant flow on both the burning and extinction process.",
+                    "citation_ids": [
+                      "PSI-69:metadata"
+                    ],
+                    "kind": "source_metadata"
+                  }
+                ]
+              }
+            }
+          ],
+          "similarities": [
+            {
+              "ids": [
+                "PSI-25",
+                "PSI-69"
+              ],
+              "variable": "gravity",
+              "values": [
+                "ground",
+                "microgravity"
+              ],
+              "scope": "documented_topics"
+            },
+            {
+              "ids": [
+                "PSI-25",
+                "PSI-69"
+              ],
+              "variable": "instrumentation",
+              "values": [
+                "camera"
+              ],
+              "scope": "documented_topics"
+            }
+          ],
+          "differences": [
+            {
+              "ids": [
+                "PSI-25",
+                "PSI-69"
+              ],
+              "variable": "materials",
+              "left": [
+                "pmma"
+              ],
+              "right": [],
+              "meaning": "different_documented_content_or_missing_evidence"
+            },
+            {
+              "ids": [
+                "PSI-25",
+                "PSI-69"
+              ],
+              "variable": "fuels",
+              "left": [
+                "pmma"
+              ],
+              "right": [
+                "heptane"
+              ],
+              "meaning": "different_documented_content_or_missing_evidence"
+            }
+          ],
+          "relations": [],
+          "compatibility": {
+            "status": "not_established",
+            "quantitative": false,
+            "required_checks": [
+              "material",
+              "geometry",
+              "gravity_g",
+              "pressure_kpa",
+              "o2_pct",
+              "methodology"
+            ],
+            "reason": "Comparar ensayos y protocolos específicos."
+          },
+          "conclusions": [],
+          "references": [
+            {
+              "citation_id": "f-11cb11cd2c24548e",
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "doc_id": "doc-5ffa911fd9b6356f",
+              "finding_id": "f-11cb11cd2c24548e",
+              "title": "BASS-II Summary Report.pdf",
+              "authors": null,
+              "year": null,
+              "doi": "10.60555/4qc4-de67",
+              "url": "https://doi.org/10.60555/4qc4-de67",
+              "page": 59,
+              "quote": "It never spread along the outer surface of the rod.",
+              "license": "CC0 (PSI record + DataCite)",
+              "status": {
+                "source_located": true,
+                "quote_verified": true,
+                "claim_checked": false,
+                "scientific_review_confirmed": false,
+                "insufficient": true
+              }
+            },
+            {
+              "citation_id": "f-4f0bf825ddbbe141",
+              "inv_ids": [
+                "PSI-25"
+              ],
+              "doc_id": "doc-5ffa911fd9b6356f",
+              "finding_id": "f-4f0bf825ddbbe141",
+              "title": "BASS-II Summary Report.pdf",
+              "authors": null,
+              "year": null,
+              "doi": "10.60555/4qc4-de67",
+              "url": "https://doi.org/10.60555/4qc4-de67",
+              "page": 36,
+              "quote": "the agreement \nseems reasonable.",
+              "license": "CC0 (PSI record + DataCite)",
+              "status": {
+                "source_located": true,
+                "quote_verified": true,
+                "claim_checked": false,
+                "scientific_review_confirmed": false,
+                "insufficient": true
+              }
+            }
+          ],
+          "warnings": [
+            "Los temas compartidos no establecen compatibilidad experimental.",
+            "La ausencia de un campo puede deberse a cobertura incompleta o restricciones de publicación."
+          ]
+        },
+        "meta": {
+          "versions": {
+            "m5_config": "rc-1",
+            "vocab": "v-0",
+            "rules": "rr-1",
+            "embedder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "tolerances": "t-1",
+            "research_api": "research-api-4",
+            "research_concepts": "research-concepts-1",
+            "research_encoder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "research_source": "475cde27d20b20c727642f2f90eab59d500a64319f07fc14020553c00bf8cfc9"
+          },
+          "limitations": [
+            {
+              "key": "draft_mappings",
+              "n": 1670
+            },
+            {
+              "key": "provisional_scenarios",
+              "n": 3
+            },
+            {
+              "key": "exploratory_tolerances",
+              "version": "t-1"
+            },
+            {
+              "key": "gravity_not_recorded",
+              "n": 1670
+            },
+            {
+              "key": "text_not_extracted",
+              "units": 12389,
+              "extracted": 30
+            },
+            {
+              "key": "findings_unreviewed",
+              "machine_verified": 38,
+              "confirmed": 0
+            },
+            {
+              "key": "similarity_not_discriminative",
+              "tau": 0.8
+            },
+            {
+              "key": "relations_provisional"
+            },
+            {
+              "key": "singularity_uncalibrated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/analyze/scenario",
+      "request": {
+        "query": "Propagación de llamas en PMMA dentro de una base lunar presurizada",
+        "material": "PMMA",
+        "pressure_kpa": 80,
+        "o2_pct": 30
+      },
+      "elapsed_seconds": 0.387,
+      "response_excerpt": {
+        "data": {
+          "criteria": {
+            "query": "Propagación de llamas en PMMA dentro de una base lunar presurizada",
+            "environment": "lunar_base",
+            "material": "PMMA",
+            "fuel": null,
+            "gravity_g": null,
+            "pressure_kpa": 80.0,
+            "o2_pct": 30.0,
+            "flow_cm_s": null,
+            "phenomenon": null,
+            "filters": {
+              "inv_ids": [],
+              "categories": [],
+              "material": null,
+              "fuel": null,
+              "gravity": null,
+              "project_type": null,
+              "instrumentation": null,
+              "security_application": null,
+              "o2_pct": null,
+              "pressure_kpa": null,
+              "flow_cm_s": null,
+              "gravity_g": null
+            },
+            "limit": 10,
+            "interpreted_query": {
+              "query": "Propagación de llamas en PMMA dentro de una base lunar presurizada PMMA",
+              "intent": "search",
+              "investigation_ids": [],
+              "concepts": [
+                "pmma",
+                "flame_spread",
+                "combustion",
+                "lunar_base"
+              ],
+              "materials": [
+                "pmma"
+              ],
+              "fuels": [
+                "pmma"
+              ],
+              "gravity": [],
+              "variables": [
+                "flame_spread"
+              ],
+              "instrumentation": [],
+              "security_applications": [],
+              "environment": "lunar_base",
+              "quantities": {
+                "o2_pct": null,
+                "pressure_kpa": null,
+                "flow_cm_s": null,
+                "gravity_g": null
+              },
+              "parser": "research-concepts-1"
+            }
+          },
+          "oxygen_partial_pressure_kpa": 24.0,
+          "investigations": [
+            {
+              "inv_id": "PSI-26",
+              "title": "Burning and Suppression of Solids",
+              "acronym": "BASS",
+              "description": "The two main objectives for BASS are to:\n    1.) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test#1 method, ground-based microgravity tests, and actual material flammability in microgravity. The relation between these can be investigated by observing flames burning for the longer times available in flight. Practical, realistic (thicker) fuels in typical geometries will be examined, including wake flames which have characteristics of a fire burning behind another object (for example, a fire burning in tight area which may not be easily accessible).\n    2.) Assess the effectiveness of an inert, gaseous extinguishing agent (similar to that used on ISS) in putting out flames over different materials, geometries, preheating, and flow.",
+              "categories": [
+                {
+                  "category": "Flame Propagation",
+                  "citation_ids": [
+                    "PSI-26:metadata",
+                    "f-7edc701a70c4c921"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-26:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Fire Suppression",
+                  "citation_ids": [
+                    "PSI-26:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Smoke and Aerosols",
+                  "citation_ids": [
+                    "resource:res-08072d43e98f8b24"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-26:metadata",
+                    "f-7edc701a70c4c921"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.587045,
+                "semantic_similarity": 0.8493,
+                "text_score": 0.1,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-26:metadata",
+                  "f-7edc701a70c4c921",
+                  "resource:res-08072d43e98f8b24"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-7edc701a70c4c921",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "kind": "result",
+                  "claim": "Testing at constant O2 mole fraction permits studying flame spread and extinction at low and high flow speed.",
+                  "attribution": "this_work",
+                  "variable": "O2 mole fraction",
+                  "effect_on": "flame spread and extinction",
+                  "direction": "none",
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-7edc701a70c4c921",
+                    "inv_ids": [
+                      "PSI-26"
+                    ],
+                    "doc_id": "doc-d87675b105c4e44e",
+                    "finding_id": "f-7edc701a70c4c921",
+                    "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/58h4-dy80",
+                    "url": "https://doi.org/10.60555/58h4-dy80",
+                    "page": 3,
+                    "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-7edc701a70c4c921",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": "doc-d87675b105c4e44e",
+                  "finding_id": "f-7edc701a70c4c921",
+                  "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": 3,
+                  "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-26:metadata",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Burning and Suppression of Solids",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-08072d43e98f8b24",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-26_Experimental table_BASS.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-25",
+              "title": "Burning and Suppression of Solids - II",
+              "acronym": "BASS-II",
+              "description": "BASS-II results contribute to the combustion computational models used in the design of fire detection and suppression systems in microgravity and on Earth.\nObjectives Include:\n  1) Study the ignition, flame growth, flame spread, and extinction limits for solid fuels burning in low-velocity forced flows in microgravity.\n  2) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test #1 method, ground-based microgravity tests, and actual material flammability in microgravity.\n  3) Provide SoFIE PIs with preliminary data to refine Science Requirements.\n  4)  Practical, realistic (thicker) fuels in typical geometries will be examined, including slabs, cylinders, and spherical sections.\n\nThe primary variables include:\n     • Forced flow velocity (speed and direction)\n     • Ambient oxygen concentration (via working volume nitrogen vitiation)\n     • Sample geometry (rods, spherical section, slabs, films, and fabric sheets",
+              "categories": [
+                {
+                  "category": "Flame Propagation",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Fire Detection",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Spacecraft Fire Safety",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-25:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.580333,
+                "semantic_similarity": 0.838974,
+                "text_score": 0.1,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-25:metadata",
+                  "f-11cb11cd2c24548e",
+                  "f-4f0bf825ddbbe141",
+                  "resource:res-eca0d187a9afd9de"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-11cb11cd2c24548e",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "kind": "result",
+                  "claim": "It never spread along the outer surface of the rod.",
+                  "attribution": null,
+                  "variable": null,
+                  "effect_on": null,
+                  "direction": null,
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-11cb11cd2c24548e",
+                    "inv_ids": [
+                      "PSI-25"
+                    ],
+                    "doc_id": "doc-5ffa911fd9b6356f",
+                    "finding_id": "f-11cb11cd2c24548e",
+                    "title": "BASS-II Summary Report.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/4qc4-de67",
+                    "url": "https://doi.org/10.60555/4qc4-de67",
+                    "page": 59,
+                    "quote": "It never spread along the outer surface of the rod.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                },
+                {
+                  "finding_id": "f-4f0bf825ddbbe141",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "kind": "limitation",
+                  "claim": "The agreement seems reasonable.",
+                  "attribution": "this_work",
+                  "variable": null,
+                  "effect_on": null,
+                  "direction": null,
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-4f0bf825ddbbe141",
+                    "inv_ids": [
+                      "PSI-25"
+                    ],
+                    "doc_id": "doc-5ffa911fd9b6356f",
+                    "finding_id": "f-4f0bf825ddbbe141",
+                    "title": "BASS-II Summary Report.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/4qc4-de67",
+                    "url": "https://doi.org/10.60555/4qc4-de67",
+                    "page": 36,
+                    "quote": "the agreement \nseems reasonable.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-11cb11cd2c24548e",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": "doc-5ffa911fd9b6356f",
+                  "finding_id": "f-11cb11cd2c24548e",
+                  "title": "BASS-II Summary Report.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": 59,
+                  "quote": "It never spread along the outer surface of the rod.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "f-4f0bf825ddbbe141",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": "doc-5ffa911fd9b6356f",
+                  "finding_id": "f-4f0bf825ddbbe141",
+                  "title": "BASS-II Summary Report.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": 36,
+                  "quote": "the agreement \nseems reasonable.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-25:metadata",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Burning and Suppression of Solids - II",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-eca0d187a9afd9de",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-25_Experimental table_BASS-II.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-99",
+              "title": "Spacecraft Fire Experiment-II",
+              "acronym": "SAFFIRE-II",
+              "description": "The objectives of SAFFIRE-II are to determine how rapidly a large scale fire grows in low-gravity and to investigate the low-g flammability limits compared to those obtained in NASA’s normal gravity material flammability screening test.",
+              "categories": [
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Spacecraft Fire Safety",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-99:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.577965,
+                "semantic_similarity": 0.835331,
+                "text_score": 0.1,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-99:metadata",
+                  "f-f9ccda459a277cf5",
+                  "resource:res-15890c5ed74a2322"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [
+                {
+                  "finding_id": "f-f9ccda459a277cf5",
+                  "inv_ids": [
+                    "PSI-100",
+                    "PSI-98",
+                    "PSI-99"
+                  ],
+                  "kind": "future_work",
+                  "claim": "A thorough evaluation of these phenomena would require many more samples and range of materials.",
+                  "attribution": null,
+                  "variable": null,
+                  "effect_on": null,
+                  "direction": null,
+                  "conditions": {},
+                  "values": [],
+                  "citation": {
+                    "citation_id": "f-f9ccda459a277cf5",
+                    "inv_ids": [
+                      "PSI-100",
+                      "PSI-98",
+                      "PSI-99"
+                    ],
+                    "doc_id": "doc-6cff0b55b8f1416f",
+                    "finding_id": "f-f9ccda459a277cf5",
+                    "title": "SAFFIRE Objectives, Development and Status.pdf",
+                    "authors": null,
+                    "year": null,
+                    "doi": "10.60555/0t15-1z43",
+                    "url": "https://doi.org/10.60555/0t15-1z43",
+                    "page": 5,
+                    "quote": "A thorough evaluation of \nthese phenomena would require many more samples \nand range of materials.",
+                    "license": "CC0 (PSI record + DataCite)",
+                    "status": {
+                      "source_located": true,
+                      "quote_verified": true,
+                      "claim_checked": false,
+                      "scientific_review_confirmed": false,
+                      "insufficient": true
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "citation_id": "f-f9ccda459a277cf5",
+                  "inv_ids": [
+                    "PSI-100",
+                    "PSI-98",
+                    "PSI-99"
+                  ],
+                  "doc_id": "doc-6cff0b55b8f1416f",
+                  "finding_id": "f-f9ccda459a277cf5",
+                  "title": "SAFFIRE Objectives, Development and Status.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/0t15-1z43",
+                  "url": "https://doi.org/10.60555/0t15-1z43",
+                  "page": 5,
+                  "quote": "A thorough evaluation of \nthese phenomena would require many more samples \nand range of materials.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-99:metadata",
+                  "inv_ids": [
+                    "PSI-99"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Spacecraft Fire Experiment-II",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/2chp-m469",
+                  "url": "https://doi.org/10.60555/2chp-m469",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-15890c5ed74a2322",
+                  "inv_ids": [
+                    "PSI-99"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-99_Experimental table_SAFFIRE-2.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/2chp-m469",
+                  "url": "https://doi.org/10.60555/2chp-m469",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-62",
+              "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+              "acronym": null,
+              "description": "The objective of this research was to develop and validate new flamelet generated manifold (FGM) modeling techniques for concurrent flame spread in microgravity. Concurrent flame spread presented one of the greatest modeling challenges in combustion science due to the intricate coupling between heat transfer, mass transport, and chemical kinetics near the solid-vapor interface. Traditional modeling strategies often relied on hybridized turbulence and chemistry models that were not fully consistent and failed to capture important intermediate reaction pathways.\nTo overcome these shortcomings, this PSI grant advanced the use of an unsteady flamelet generated manifold (UFGM) framework that reduced the complexity of reacting systems by mapping them into lower-dimensional manifolds. The research aimed to leverage this methodology to simulate solid fuel combustion processes with high fidelity, using the NASA Burning and Suppression of Solids (BASS and BASS-II) experiments as benchmarks. Ultimately, the long-term goal was to enable accurate prediction of flammability limits for spacecraft materials and to provide a tool that could also serve as a subgrid-scale model in large-eddy simulations of fires, supporting spacecraft safety and hazard mitigation.",
+              "categories": [
+                {
+                  "category": "Flame Propagation",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Material Flammability",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Modeling",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Smoke and Aerosols",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Spacecraft Fire Safety",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                },
+                {
+                  "category": "Combustion Fundamentals",
+                  "citation_ids": [
+                    "PSI-62:metadata"
+                  ],
+                  "method": "documented_concept_match",
+                  "version": "research-concepts-1"
+                }
+              ],
+              "relevance": {
+                "score": 0.574047,
+                "semantic_similarity": 0.829303,
+                "text_score": 0.1,
+                "exact_identifier": false,
+                "explanation": "Coincidencia con identificador, conceptos o texto de fuentes autorizadas.",
+                "citation_ids": [
+                  "PSI-62:metadata"
+                ],
+                "score_meaning": "retrieval_rank_not_scientific_probability"
+              },
+              "applicability": "not_established",
+              "related_findings": [],
+              "references": [
+                {
+                  "citation_id": "PSI-62:metadata",
+                  "inv_ids": [
+                    "PSI-62"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Concurrent Flame Spread Modeling using Flamelet Generated Manifolds in Microgravity with Comparison to BASS Experiments using Two-Color Tomography",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/e9xp-ex83",
+                  "url": "https://doi.org/10.60555/e9xp-ex83",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            }
+          ],
+          "trials": [
+            {
+              "trial": {
+                "trial_key": "trl-0010a849623a9cf6",
+                "inv_id": "PSI-26",
+                "experiment_id": null,
+                "entity_type": "trial",
+                "row_grain": "trial",
+                "fuel": "SIBAL 2 cm",
+                "geometry": null,
+                "methodology": null,
+                "measurements": [
+                  {
+                    "variable": "o2_pct",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "%",
+                    "role": "recorded_condition",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "pressure_kpa",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "kPa",
+                    "role": "recorded_condition",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "flow_cm_s",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "cm/s",
+                    "role": "recorded_condition",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "gravity_g",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "g",
+                    "role": "recorded_condition",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "duration_s",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "s",
+                    "role": "recorded_value",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  }
+                ],
+                "source_resource_id": "res-08072d43e98f8b24",
+                "row_ref": "PSI-26_Experimental table_BASS.csv#record=57",
+                "mapping_status": "draft",
+                "interpretation_verified": false,
+                "raw_observations": {
+                  "Date": "7/19/2012",
+                  "GMT": "201",
+                  "As Run Test #": "55",
+                  "Test #": "3",
+                  "Sample #": "6",
+                  "Fuel Sample Material": "SIBAL 2 cm"
+                }
+              },
+              "matching_conditions": [],
+              "differences": [],
+              "unknown": [
+                "geometry",
+                "gravity_g",
+                "material_match",
+                "measurement_method",
+                "o2_pct",
+                "pressure_kpa"
+              ],
+              "applicability": "not_established"
+            },
+            {
+              "trial": {
+                "trial_key": "trl-021dd31381237e32",
+                "inv_id": "PSI-25",
+                "experiment_id": null,
+                "entity_type": "trial",
+                "row_grain": "trial",
+                "fuel": "3/8\" black rod",
+                "geometry": null,
+                "methodology": null,
+                "measurements": [
+                  {
+                    "variable": "o2_pct",
+                    "minimum": 17.5,
+                    "maximum": 19.0,
+                    "unit": "%",
+                    "role": "recorded_condition",
+                    "provenance": {
+                      "approx": false,
+                      "canonical_unit": "fraction",
+                      "combine": "envelope (min/max over all bound columns and cell values)",
+                      "conversion_verified": true,
+                      "interpretation_verified": false,
+                      "max": 0.19,
+                      "min": 0.17500000000000002,
+                      "parts": [
+                        {
+                          "approx": false,
+                          "cell_unit": null,
+                          "column": "Calibrated initial O2 % by vol",
+                          "converted": {
+                            "rule": "%->fraction:percent",
+                            "unit": "fraction",
+                            "values": [
+                              0.19
+                            ]
+                          },
+                          "kind": "number",
+                          "max": 19.0,
+                          "min": 19.0,
+                          "raw": "19",
+                          "unit": "%",
+                          "unit_source": "header",
+                          "values": [
+                            19.0
+                          ]
+                        },
+                        {
+                          "approx": false,
+                          "cell_unit": null,
+                          "column": "Calibrated final O2 % by vol",
+                          "converted": {
+                            "rule": "%->fraction:percent",
+                            "unit": "fraction",
+                            "values": [
+                              0.17500000000000002
+                            ]
+                          },
+                          "kind": "number",
+                          "max": 17.5,
+                          "min": 17.5,
+                          "raw": "17.5",
+                          "unit": "%",
+                          "unit_source": "header",
+                          "values": [
+                            17.5
+                          ]
+                        }
+                      ],
+                      "rules": [
+                        "%->fraction:percent"
+                      ]
+                    },
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "pressure_kpa",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "kPa",
+                    "role": "recorded_condition",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "flow_cm_s",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "cm/s",
+                    "role": "recorded_condition",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "gravity_g",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "g",
+                    "role": "recorded_condition",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  },
+                  {
+                    "variable": "duration_s",
+                    "minimum": null,
+                    "maximum": null,
+                    "unit": "s",
+                    "role": "recorded_value",
+                    "provenance": {},
+                    "uncertainty": "not_reported_in_normalized_data"
+                  }
+                ],
+                "source_resource_id": "res-eca0d187a9afd9de",
+                "row_ref": "PSI-25_Experimental table_BASS-II.csv#record=100",
+                "mapping_status": "draft",
+                "interpretation_verified": false,
+                "raw_observations": {
+                  "PI": "Fernandez-Pello",
+                  "Test #": "P24",
+                  "Date": "7/30/2014",
+                  "GMT": "211",
+                  "Sample #": "819L",
+                  "Fuel Sample Material": "3/8\" black rod",
+                  "Flow restrictor": "2",
+                  "Fan display": "55  47  etc (pot 1  2  1  2   etc)",
+                  "Air display": "2  0  2  0  etc",
+                  "Radiometer gain (1000 250 50 10)": "250>50",
+                  "Total Frames Shot": "308",
+                  "Calibrated initial O2 % by vol": "19",
+                  "Calibrated final O2 % by vol": "17.5",
+                  "Initial CO2 % by vol": "1.2",
+                  "Final CO2 % by vol": "2.24",
+                  "Initial CO (ppm)": "26",
+                  "Final CO (ppm)": "260"
+                }
+              },
+              "matching_conditions": [],
+              "differences": [
+                {
+                  "variable": "o2_pct",
+                  "requested": 30.0,
+                  "available": [
+                    17.5,
+                    19.0
+                  ],
+                  "unit": "%"
+                }
+              ],
+              "unknown": [
+                "geometry",
+                "gravity_g",
+                "material_match",
+                "measurement_method",
+                "pressure_kpa"
+              ],
+              "applicability": "not_established"
+            }
+          ],
+          "trial_total": 262,
+          "gaps": [
+            {
+              "variable": "geometry",
+              "affected_trials": 262,
+              "status": "missing_in_consulted_records"
+            },
+            {
+              "variable": "gravity_g",
+              "affected_trials": 262,
+              "status": "missing_in_consulted_records"
+            }
+          ],
+          "implications": [
+            {
+              "kind": "applicability_limit",
+              "text": "Las condiciones registradas permiten identificar coincidencias y diferencias. La evidencia disponible no establece aplicabilidad al escenario ni permite predicciones.",
+              "citation_ids": [
+                "f-7edc701a70c4c921",
+                "PSI-26:metadata",
+                "resource:res-08072d43e98f8b24",
+                "f-11cb11cd2c24548e",
+                "f-4f0bf825ddbbe141",
+                "PSI-25:metadata",
+                "resource:res-eca0d187a9afd9de",
+                "f-f9ccda459a277cf5",
+                "PSI-99:metadata",
+                "resource:res-15890c5ed74a2322",
+                "PSI-62:metadata"
+              ]
+            }
+          ],
+          "recommendations": [
+            {
+              "inv_id": "PSI-26",
+              "reason": "Revisar condiciones faltantes y protocolos.",
+              "references": [
+                {
+                  "citation_id": "f-7edc701a70c4c921",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": "doc-d87675b105c4e44e",
+                  "finding_id": "f-7edc701a70c4c921",
+                  "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": 3,
+                  "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-26:metadata",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Burning and Suppression of Solids",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-08072d43e98f8b24",
+                  "inv_ids": [
+                    "PSI-26"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-26_Experimental table_BASS.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/58h4-dy80",
+                  "url": "https://doi.org/10.60555/58h4-dy80",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            },
+            {
+              "inv_id": "PSI-25",
+              "reason": "Revisar condiciones faltantes y protocolos.",
+              "references": [
+                {
+                  "citation_id": "f-11cb11cd2c24548e",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": "doc-5ffa911fd9b6356f",
+                  "finding_id": "f-11cb11cd2c24548e",
+                  "title": "BASS-II Summary Report.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": 59,
+                  "quote": "It never spread along the outer surface of the rod.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "f-4f0bf825ddbbe141",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": "doc-5ffa911fd9b6356f",
+                  "finding_id": "f-4f0bf825ddbbe141",
+                  "title": "BASS-II Summary Report.pdf",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": 36,
+                  "quote": "the agreement \nseems reasonable.",
+                  "license": "CC0 (PSI record + DataCite)",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": true,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "PSI-25:metadata",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "Burning and Suppression of Solids - II",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": null,
+                  "quote": null,
+                  "license": "CC0",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                },
+                {
+                  "citation_id": "resource:res-eca0d187a9afd9de",
+                  "inv_ids": [
+                    "PSI-25"
+                  ],
+                  "doc_id": null,
+                  "finding_id": null,
+                  "title": "PSI-25_Experimental table_BASS-II.csv",
+                  "authors": null,
+                  "year": null,
+                  "doi": "10.60555/4qc4-de67",
+                  "url": "https://doi.org/10.60555/4qc4-de67",
+                  "page": null,
+                  "quote": null,
+                  "license": "public_export_allowed",
+                  "status": {
+                    "source_located": true,
+                    "quote_verified": false,
+                    "claim_checked": false,
+                    "scientific_review_confirmed": false,
+                    "insufficient": true
+                  }
+                }
+              ]
+            }
+          ],
+          "references": [
+            {
+              "citation_id": "f-7edc701a70c4c921",
+              "inv_ids": [
+                "PSI-26"
+              ],
+              "doc_id": "doc-d87675b105c4e44e",
+              "finding_id": "f-7edc701a70c4c921",
+              "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+              "authors": null,
+              "year": null,
+              "doi": "10.60555/58h4-dy80",
+              "url": "https://doi.org/10.60555/58h4-dy80",
+              "page": 3,
+              "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+              "license": "CC0 (PSI record + DataCite)",
+              "status": {
+                "source_located": true,
+                "quote_verified": true,
+                "claim_checked": false,
+                "scientific_review_confirmed": false,
+                "insufficient": true
+              }
+            },
+            {
+              "citation_id": "PSI-26:metadata",
+              "inv_ids": [
+                "PSI-26"
+              ],
+              "doc_id": null,
+              "finding_id": null,
+              "title": "Burning and Suppression of Solids",
+              "authors": null,
+              "year": null,
+              "doi": "10.60555/58h4-dy80",
+              "url": "https://doi.org/10.60555/58h4-dy80",
+              "page": null,
+              "quote": null,
+              "license": "CC0",
+              "status": {
+                "source_located": true,
+                "quote_verified": false,
+                "claim_checked": false,
+                "scientific_review_confirmed": false,
+                "insufficient": true
+              }
+            }
+          ],
+          "warnings": [
+            "La relevancia temática no establece equivalencia de condiciones experimentales.",
+            "Los resultados en microgravedad requieren validación antes de extrapolarlos a gravedad lunar o marciana.",
+            "El porcentaje de oxígeno debe analizarse junto con la presión total y su presión parcial.",
+            "Las condiciones configuradas son entradas del usuario. No son mediciones experimentales.",
+            "Se muestran hasta 200 ensayos. trial_total incluye todos los evaluados."
+          ]
+        },
+        "meta": {
+          "versions": {
+            "m5_config": "rc-1",
+            "vocab": "v-0",
+            "rules": "rr-1",
+            "embedder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "tolerances": "t-1",
+            "research_api": "research-api-4",
+            "research_concepts": "research-concepts-1",
+            "research_encoder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "research_source": "475cde27d20b20c727642f2f90eab59d500a64319f07fc14020553c00bf8cfc9"
+          },
+          "limitations": [
+            {
+              "key": "draft_mappings",
+              "n": 1670
+            },
+            {
+              "key": "provisional_scenarios",
+              "n": 3
+            },
+            {
+              "key": "exploratory_tolerances",
+              "version": "t-1"
+            },
+            {
+              "key": "gravity_not_recorded",
+              "n": 1670
+            },
+            {
+              "key": "text_not_extracted",
+              "units": 12389,
+              "extracted": 30
+            },
+            {
+              "key": "findings_unreviewed",
+              "machine_verified": 38,
+              "confirmed": 0
+            },
+            {
+              "key": "similarity_not_discriminative",
+              "tau": 0.8
+            },
+            {
+              "key": "relations_provisional"
+            },
+            {
+              "key": "singularity_uncalibrated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "path": "/assistant/query",
+      "request": {
+        "question": "¿Cuál es la velocidad exacta de propagación del fuego sobre PMMA en gravedad lunar?"
+      },
+      "elapsed_seconds": 0.133,
+      "response_excerpt": {
+        "data": {
+          "interpretation": "La evidencia recuperada no permite establecer una cifra exacta para la condición solicitada. Se requieren mediciones específicas y un modelo validado para cualquier extrapolación.",
+          "statements": [
+            {
+              "text": "Testing at constant O2 mole fraction permits studying flame spread and extinction at low and high flow speed.",
+              "kind": "source_reported_claim",
+              "interpretation": "La fuente comunica este resultado. Su alcance depende de las condiciones documentadas.",
+              "claim_type": "result",
+              "attribution": "this_work",
+              "inv_ids": [
+                "PSI-26"
+              ],
+              "finding_ids": [
+                "f-7edc701a70c4c921"
+              ],
+              "citation_ids": [
+                "f-7edc701a70c4c921"
+              ],
+              "scientific_review_confirmed": false
+            }
+          ],
+          "evidence": [
+            {
+              "finding_id": "f-7edc701a70c4c921",
+              "inv_ids": [
+                "PSI-26"
+              ],
+              "kind": "result",
+              "claim": "Testing at constant O2 mole fraction permits studying flame spread and extinction at low and high flow speed.",
+              "attribution": "this_work",
+              "variable": "O2 mole fraction",
+              "effect_on": "flame spread and extinction",
+              "direction": "none",
+              "conditions": {},
+              "values": [],
+              "citation": {
+                "citation_id": "f-7edc701a70c4c921",
+                "inv_ids": [
+                  "PSI-26"
+                ],
+                "doc_id": "doc-d87675b105c4e44e",
+                "finding_id": "f-7edc701a70c4c921",
+                "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+                "authors": null,
+                "year": null,
+                "doi": "10.60555/58h4-dy80",
+                "url": "https://doi.org/10.60555/58h4-dy80",
+                "page": 3,
+                "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+                "license": "CC0 (PSI record + DataCite)",
+                "status": {
+                  "source_located": true,
+                  "quote_verified": true,
+                  "claim_checked": false,
+                  "scientific_review_confirmed": false,
+                  "insufficient": true
+                }
+              }
+            }
+          ],
+          "finding_ids": [
+            "f-7edc701a70c4c921"
+          ],
+          "references": [
+            {
+              "citation_id": "f-7edc701a70c4c921",
+              "inv_ids": [
+                "PSI-26"
+              ],
+              "doc_id": "doc-d87675b105c4e44e",
+              "finding_id": "f-7edc701a70c4c921",
+              "title": "Flammability Aspects of Fabric_USNationalCombustion2013.pdf",
+              "authors": null,
+              "year": null,
+              "doi": "10.60555/58h4-dy80",
+              "url": "https://doi.org/10.60555/58h4-dy80",
+              "page": 3,
+              "quote": "♦Testing at constant O2 mole fraction \npermits studying flame spread and \nextinction at low and high flow speed.",
+              "license": "CC0 (PSI record + DataCite)",
+              "status": {
+                "source_located": true,
+                "quote_verified": true,
+                "claim_checked": false,
+                "scientific_review_confirmed": false,
+                "insufficient": true
+              }
+            }
+          ],
+          "limitations": [
+            "La extracción y la verificación literal no validan la interpretación científica.",
+            "Los resultados se limitan a las fuentes procesadas y autorizadas de esta exportación."
+          ],
+          "warnings": [
+            "La interpretación conserva las afirmaciones de las fuentes. La compatibilidad requiere validar las condiciones."
+          ],
+          "evidence_status": {
+            "source_located": true,
+            "quote_verified": true,
+            "claim_checked": false,
+            "scientific_review_confirmed": false,
+            "insufficient": true
+          },
+          "context": {
+            "investigation_ids": [
+              "PSI-99",
+              "PSI-26",
+              "PSI-25",
+              "PSI-62"
+            ],
+            "criteria": {
+              "query": "¿Cuál es la velocidad exacta de propagación del fuego sobre PMMA en gravedad lunar?",
+              "intent": "interpret",
+              "investigation_ids": [],
+              "concepts": [
+                "pmma",
+                "flame_spread"
+              ],
+              "materials": [
+                "pmma"
+              ],
+              "fuels": [
+                "pmma"
+              ],
+              "gravity": [],
+              "variables": [
+                "flame_spread"
+              ],
+              "instrumentation": [],
+              "security_applications": [],
+              "environment": null,
+              "quantities": {
+                "o2_pct": null,
+                "pressure_kpa": null,
+                "flow_cm_s": null,
+                "gravity_g": null
+              },
+              "parser": "research-concepts-1"
+            },
+            "finding_ids": [],
+            "trial_keys": [],
+            "model": null
+          },
+          "generation_mode": "extractive_grounded"
+        },
+        "meta": {
+          "versions": {
+            "m5_config": "rc-1",
+            "vocab": "v-0",
+            "rules": "rr-1",
+            "embedder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "tolerances": "t-1",
+            "research_api": "research-api-4",
+            "research_concepts": "research-concepts-1",
+            "research_encoder": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3:mean:prefix=query:",
+            "research_source": "475cde27d20b20c727642f2f90eab59d500a64319f07fc14020553c00bf8cfc9"
+          },
+          "limitations": [
+            {
+              "key": "draft_mappings",
+              "n": 1670
+            },
+            {
+              "key": "provisional_scenarios",
+              "n": 3
+            },
+            {
+              "key": "exploratory_tolerances",
+              "version": "t-1"
+            },
+            {
+              "key": "gravity_not_recorded",
+              "n": 1670
+            },
+            {
+              "key": "text_not_extracted",
+              "units": 12389,
+              "extracted": 30
+            },
+            {
+              "key": "findings_unreviewed",
+              "machine_verified": 38,
+              "confirmed": 0
+            },
+            {
+              "key": "similarity_not_discriminative",
+              "tau": 0.8
+            },
+            {
+              "key": "relations_provisional"
+            },
+            {
+              "key": "singularity_uncalibrated"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

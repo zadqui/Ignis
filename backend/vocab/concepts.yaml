@@ -1,0 +1,72 @@
+# M5 normalisation vocabulary — DRAFT (v-0). Every concept is 'proposed' until the developer approves it.
+# Proposed equivalences may be used exploratorily; relations record whether they relied on unapproved concepts.
+# A term must map to at most one concept (checked). Matching is deterministic (normalised exact match).
+version: v-0
+status: draft
+concepts:
+  # ---- variables / effects linked to M2 condition fields
+  - {id: oxygen_concentration, kind: variable, m2_field: o2, status: proposed, label: {en: "oxygen concentration", es: "concentración de oxígeno"},
+     synonyms: ["o2", "oxygen", "oxygen concentration", "o2 concentration", "oxygen mole fraction", "o2 mole fraction",
+                "oxygen fraction", "o2 fraction", "oxygen level", "oxygen content", "ambient oxygen"]}
+  - {id: pressure, kind: variable, m2_field: pressure, status: proposed, label: {en: "pressure", es: "presión"},
+     synonyms: ["pressure", "ambient pressure", "chamber pressure", "total pressure"]}
+  - {id: flow_velocity, kind: variable, m2_field: flow_velocity, status: proposed, label: {en: "flow velocity", es: "velocidad de flujo"},
+     synonyms: ["flow velocity", "flow speed", "opposed flow", "opposed flow velocity", "airflow", "air flow", "forced flow"]}
+  - {id: gravity_level, kind: variable, m2_field: gravity_g, status: proposed, label: {en: "gravity level", es: "nivel de gravedad"},
+     synonyms: ["gravity", "gravity level", "gravity regime", "gravitational acceleration", "g level", "buoyancy"]}
+  # ---- variables / effects (combustion)
+  - {id: fuel_flow_rate, kind: variable, status: proposed, label: {en: "fuel flow rate", es: "caudal de combustible"},
+     synonyms: ["flow rate", "fuel flow rate", "fuel flow", "volumetric flow rate"]}
+  - {id: flame_spread_rate, kind: effect, status: proposed, label: {en: "flame spread rate", es: "velocidad de propagación de llama"},
+     synonyms: ["flame spread rate", "spread rate", "flame spread", "flame spread velocity"]}
+  - {id: extinction, kind: effect, status: proposed, label: {en: "extinction", es: "extinción"},
+     synonyms: ["extinction", "flame extinction", "extinction limit"]}
+  - {id: flammability_limit, kind: effect, status: proposed, label: {en: "flammability limit", es: "límite de inflamabilidad"},
+     synonyms: ["flammability limit", "dilution limit", "limiting oxygen index", "loi", "lower flammability limit"]}
+  - {id: burning_rate, kind: effect, status: proposed, label: {en: "burning rate", es: "tasa de combustión"},
+     synonyms: ["burning rate", "burn rate", "mass burning rate", "burning rate constant"]}
+  - {id: burn_duration, kind: effect, status: proposed, label: {en: "burn duration", es: "duración de la combustión"},
+     synonyms: ["burn time", "burning time", "flame duration", "burning duration", "burn duration"]}
+  - {id: flame_temperature, kind: effect, status: proposed, label: {en: "flame temperature", es: "temperatura de llama"},
+     synonyms: ["flame temperature", "maximum flame temperature", "peak flame temperature"]}
+  - {id: cool_flame_temperature, kind: effect, status: proposed, label: {en: "cool flame temperature", es: "temperatura de llama fría"},
+     synonyms: ["cool flame temperature"]}
+  - {id: cool_flame_occurrence, kind: effect, status: proposed, label: {en: "cool flame occurrence", es: "aparición de llama fría"},
+     synonyms: ["cool flame", "cool flame creation", "cool flame formation", "cool flame behavior", "cool flame burning"]}
+  - {id: hot_flame_behavior, kind: effect, status: proposed, label: {en: "hot flame behavior", es: "comportamiento de llama caliente"},
+     synonyms: ["hot flame behavior", "hot flame"]}
+  - {id: flame_transition, kind: variable, status: proposed, label: {en: "hot-cool flame transition", es: "transición llama caliente-fría"},
+     synonyms: ["flame transition", "hot cool flame transition", "hot to cool flame transition"]}
+  - {id: flame_stability, kind: effect, status: proposed, label: {en: "flame stability", es: "estabilidad de llama"},
+     synonyms: ["stability", "flame stability"]}
+  - {id: heat_release_rate, kind: effect, status: proposed, label: {en: "heat release rate", es: "tasa de liberación de calor"},
+     synonyms: ["heat generation rate", "heat release rate", "heat release"]}
+  - {id: ntc_chemistry, kind: variable, status: proposed, label: {en: "NTC chemistry", es: "química NTC"},
+     synonyms: ["ntc chemistry", "negative temperature coefficient chemistry", "ntc region"]}
+  - {id: soot, kind: effect, status: proposed, label: {en: "soot", es: "hollín"},
+     synonyms: ["soot", "soot volume fraction", "soot formation", "soot production"]}
+  - {id: smoke_particles, kind: effect, status: proposed, label: {en: "smoke particles", es: "partículas de humo"},
+     synonyms: ["smoke", "particulate", "particle size", "particle size distribution", "smoke particles"]}
+  # ---- fuels
+  - {id: n_heptane, kind: fuel, status: proposed, label: {en: "n-heptane", es: "n-heptano"}, synonyms: ["n-heptane", "heptane"]}
+  - {id: n_decane, kind: fuel, status: proposed, label: {en: "n-decane", es: "n-decano"}, synonyms: ["n-decane", "decane"]}
+  - {id: n_dodecane, kind: fuel, status: proposed, label: {en: "n-dodecane", es: "n-dodecano"}, synonyms: ["n-dodecane", "dodecane"]}
+  - {id: pmma, kind: fuel, status: proposed, label: {en: "PMMA", es: "PMMA"}, synonyms: ["pmma", "polymethyl methacrylate", "acrylic"]}
+  - {id: methane, kind: fuel, status: proposed, label: {en: "methane", es: "metano"}, synonyms: ["methane", "ch4"]}
+  - {id: ethylene, kind: fuel, status: proposed, label: {en: "ethylene", es: "etileno"}, synonyms: ["ethylene", "c2h4"]}
+  - {id: ethanol, kind: fuel, status: proposed, label: {en: "ethanol", es: "etanol"}, synonyms: ["ethanol"]}
+  # ---- geometry / phase
+  - {id: droplet, kind: geometry, status: proposed, label: {en: "droplet", es: "gota"}, synonyms: ["droplet", "fuel droplet", "drop"]}
+  - {id: rod, kind: geometry, status: proposed, label: {en: "rod", es: "varilla"}, synonyms: ["rod", "cylinder", "cylindrical rod"]}
+  - {id: flat_sheet, kind: geometry, status: proposed, label: {en: "flat sheet", es: "lámina plana"}, synonyms: ["flat sheet", "sheet", "thin sheet", "slab"]}
+  - {id: wire, kind: geometry, status: proposed, label: {en: "wire", es: "cable"}, synonyms: ["wire", "wire insulation"]}
+  - {id: solid_phase, kind: phase, status: proposed, label: {en: "solid", es: "sólido"}, synonyms: ["solid", "solid fuel"]}
+  - {id: liquid_phase, kind: phase, status: proposed, label: {en: "liquid", es: "líquido"}, synonyms: ["liquid", "liquid fuel"]}
+  - {id: gas_phase, kind: phase, status: proposed, label: {en: "gas", es: "gas"}, synonyms: ["gas", "gaseous", "gas phase", "gaseous fuel"]}
+  # ---- gravity regime (facet)
+  - {id: microgravity, kind: gravity_regime, status: proposed, label: {en: "microgravity", es: "microgravedad"},
+     synonyms: ["microgravity", "micro gravity", "low gravity", "low-gravity", "reduced gravity", "zero gravity", "μg"]}
+  - {id: normal_gravity, kind: gravity_regime, status: proposed, label: {en: "normal gravity", es: "gravedad normal"},
+     synonyms: ["normal gravity", "1g", "1 g", "earth gravity", "normal-gravity", "terrestrial gravity"]}
+  - {id: partial_gravity, kind: gravity_regime, status: proposed, label: {en: "partial gravity", es: "gravedad parcial"},
+     synonyms: ["partial gravity", "lunar gravity", "martian gravity", "mars gravity"]}

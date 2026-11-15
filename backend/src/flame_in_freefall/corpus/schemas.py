@@ -1,0 +1,122 @@
+"""Typed Parquet schemas of the M3 corpus tables."""
+
+from __future__ import annotations
+
+SCHEMAS: dict[str, dict[str, str]] = {
+    "investigation_rights": {
+        "inv_id": "VARCHAR",
+        "dataset_doi": "VARCHAR",
+        "psi_license": "VARCHAR",
+        "datacite_found": "BOOLEAN",
+        "datacite_rights": "VARCHAR[]",
+        "license_status": "VARCHAR",
+        "basis": "VARCHAR",
+    },
+    "documents": {
+        "doc_id": "VARCHAR",
+        "origin": "VARCHAR",  # psi_internal | openalex_abstract | semantic_scholar_abstract | oa_fulltext
+        "work_id": "VARCHAR",
+        "sha256": "VARCHAR",
+        "file_ext": "VARCHAR",
+        "size_bytes": "BIGINT",
+        "title": "VARCHAR",
+        "inv_ids": "VARCHAR[]",
+        "n_resources": "INTEGER",
+        "evidence_level": "VARCHAR",  # full_text | abstract | title_only
+        # extracted | partial_ocr | needs_ocr | unsupported_format | permission_blocked
+        # | not_downloaded | download_failed | extraction_error
+        "processing_status": "VARCHAR",
+        "status_reason": "VARCHAR",
+        "license_status": "VARCHAR",
+        "permission": "VARCHAR",
+        "permission_rule": "VARCHAR",
+        "permission_basis": "VARCHAR",
+        "notices": "VARCHAR[]",
+        "genre": "VARCHAR",
+        "content_nature": "VARCHAR",
+        "genre_confidence": "VARCHAR",
+        "genre_rule": "VARCHAR",
+        "genre_status": "VARCHAR",
+        "extractor": "VARCHAR",
+        "text_quality": "VARCHAR",  # ok | suspect_garbled | low_text
+        "stopword_ratio": "DOUBLE",
+        "n_pages": "INTEGER",
+        "n_pages_with_text": "INTEGER",
+        "n_chars": "BIGINT",
+        "n_sentences": "INTEGER",
+        "processed_at": "TIMESTAMPTZ",
+    },
+    "document_resources": {
+        "doc_id": "VARCHAR",
+        "resource_id": "VARCHAR",
+        "inv_id": "VARCHAR",
+        "category": "VARCHAR",
+        "path": "VARCHAR",
+        "file_name": "VARCHAR",
+    },
+    "doc_pages": {
+        "doc_id": "VARCHAR",
+        "page_no": "INTEGER",
+        "unit": "VARCHAR",
+        "text": "VARCHAR",
+        "n_chars": "INTEGER",
+        "has_text": "BOOLEAN",
+    },
+    "doc_sentences": {
+        "doc_id": "VARCHAR",
+        "sent_idx": "INTEGER",
+        "page_no": "INTEGER",
+        "char_start": "INTEGER",
+        "char_end": "INTEGER",
+        "text": "VARCHAR",
+        "text_norm": "VARCHAR",
+        "section_title": "VARCHAR",
+        "section_kind": "VARCHAR",
+        "is_heading": "BOOLEAN",
+    },
+    "works": {
+        "work_id": "VARCHAR",
+        "doi": "VARCHAR",
+        "title": "VARCHAR",
+        "title_norm": "VARCHAR",
+        "inv_ids": "VARCHAR[]",
+        "openalex_id": "VARCHAR",
+        "publication_year": "INTEGER",
+        "work_type": "VARCHAR",
+        "oa_status": "VARCHAR",
+        "cited_by_count": "INTEGER",
+        "found_openalex": "BOOLEAN",
+        "found_semantic_scholar": "BOOLEAN",
+        "evidence_level": "VARCHAR",
+        "abstract_source": "VARCHAR",
+        "fulltext_doc_id": "VARCHAR",
+        "fulltext_status": "VARCHAR",
+    },
+    "work_investigations": {
+        "work_id": "VARCHAR",
+        "inv_id": "VARCHAR",
+        "pub_index": "INTEGER",
+    },
+    "access_options": {
+        "work_id": "VARCHAR",
+        "source": "VARCHAR",
+        "url": "VARCHAR",  # public OA / landing URLs only (never signed URLs)
+        "is_pdf": "BOOLEAN",
+        "version": "VARCHAR",
+        "license": "VARCHAR",
+        "host": "VARCHAR",
+        "permission": "VARCHAR",
+        "permission_rule": "VARCHAR",
+        "permission_basis": "VARCHAR",
+    },
+    "link_candidates": {
+        "kind": "VARCHAR",  # same_work_candidate | title_link_candidate
+        "left_id": "VARCHAR",
+        "right_source": "VARCHAR",
+        "right_id": "VARCHAR",
+        "right_title": "VARCHAR",
+        "match_rule": "VARCHAR",
+        "status": "VARCHAR",  # candidate (until human review)
+        "detail": "VARCHAR",
+    },
+}

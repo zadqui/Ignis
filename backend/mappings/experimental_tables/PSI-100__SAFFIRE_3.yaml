@@ -1,0 +1,34 @@
+# DRAFT mapping generated from reusable rules (flame_in_freefall.trials.draft).
+# Not scientifically validated. To review: confirm each field against PSI
+# documentation, set units only with a unit_source, set interpretation_verified,
+# then review.status: reviewed and bump version.
+# Table columns: ['Sample Number', 'Material', 'Sample Thickness', 'Sample Length', 'Sample Width', 'Air Flow', 'Direction', 'Camera 1', 'Camera 2']
+config_id: PSI-100__SAFFIRE_3
+version: 1
+source:
+  inv_id: PSI-100
+  file_name: PSI-100_Experimental table_SAFFIRE-3.csv
+  resource_id: res-0cde9729e42f4173
+review:
+  status: draft
+  priority: normal
+  reviewed_by: null
+  reviewed_on: null
+  notes: []
+grain: trial
+grain_source: 'heuristic: default (one row per test/sample)'
+trial_id:
+  column: Sample Number
+  normalize: strip_whitespace
+  evidence: 0/2 normalised ids equal an inventory path segment
+o2_location: unknown
+o2_location_source: null
+fields:
+  fuel:
+    columns:
+    - Material
+    interpretation_verified: false
+  flow_velocity:
+    columns:
+    - Air Flow
+    interpretation_verified: false
